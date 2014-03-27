@@ -1,0 +1,1300 @@
+@AUTOMOBILE	customer.bin	167
+AND	y.tab.c	116
+AND	y.tab.c	125
+AND	y.tab.h	41
+AND	y.tab.h	50
+AddLitToFile	Comparison.cc	/^void AddLitToFile (int &numFieldsInLiteral, FILE */
+AddPage	File.cc	/^void File :: AddPage (Page *addMe, off_t whichPage/
+Advance	TwoWayList.cc	/^TwoWayList <Type> :: Advance ()$/
+AndList	Parser.y	55
+AndList	ParseTree.h	45
+Append	File.cc	/^int Page :: Append (Record *addMe) {$/
+Apply	Function.cc	/^Type Function :: Apply (Record &toMe, int &intResu/
+ArithOp	Function.h	9
+Arithmatic	Function.h	13
+Attribute	Schema.h	16
+BEGIN	lex.yy.c	125
+BEGIN	lex.yyfunc.c	144
+BIGQ_H	BigQ.h	2
+BigQ	BigQ.cc	/^BigQ :: BigQ (Pipe &in, Pipe &out, OrderMaker &sor/
+BigQ	BigQ.h	67
+BigQ.o	Makefile	/^BigQ.o: BigQ.cc$/
+BigQ::inputPipe	BigQ.h	77
+BigQ::outputPipe	BigQ.h	78
+BigQ::runLength	BigQ.h	80
+BigQ::sortOrder	BigQ.h	79
+BigQ::~BigQ	BigQ.cc	/^BigQ::~BigQ () {$/
+CC	Makefile	/^CC = g++ -O2 -Wno-deprecated$/
+CNF	Comparison.h	78
+CNF::numAnds	Comparison.h	86
+CNF::orLens	Comparison.h	85
+CNF::orList	Comparison.h	83
+COMPARISON_H	Comparison.h	2
+Close	File.cc	/^int File :: Close () {$/
+CompOperator	Defs.h	12
+Compare	ComparisonEngine.cc	/^int ComparisonEngine :: Compare(Record *left, Reco/
+Compare	ComparisonEngine.cc	/^int ComparisonEngine :: Compare (Record *left, Ord/
+Compare	ComparisonEngine.cc	/^int ComparisonEngine :: Compare (Record *left, Rec/
+Compare	ComparisonEngine.cc	/^int ComparisonEngine :: Compare (Record *left, Rec/
+Comparison	Comparison.h	15
+Comparison.o	Makefile	/^Comparison.o: Comparison.cc$/
+Comparison::Comparison	Comparison.cc	/^Comparison::Comparison()$/
+Comparison::Comparison	Comparison.cc	/^Comparison::Comparison(const Comparison &copy_me)$/
+Comparison::attType	Comparison.h	26
+Comparison::op	Comparison.h	28
+Comparison::operand1	Comparison.h	21
+Comparison::operand2	Comparison.h	23
+Comparison::whichAtt1	Comparison.h	22
+Comparison::whichAtt2	Comparison.h	24
+ComparisonEngine	ComparisonEngine.h	16
+ComparisonEngine.o	Makefile	/^ComparisonEngine.o: ComparisonEngine.cc$/
+ComparisonOp	ParseTree.h	24
+ComposeRecord	Record.cc	/^int Record :: ComposeRecord (Schema *mySchema, con/
+CompoundExp	ParserFunc.y	47
+Condition	Parser.y	97
+Consume	Record.cc	/^void Record :: Consume (Record *fromMe) {$/
+Copy	Record.cc	/^void Record :: Copy (Record *copyMe) {$/
+CopyBits	Record.cc	/^void Record :: CopyBits(char *bits, int b_len) {$/
+Current	TwoWayList.cc	/^TwoWayList <Type> ::  Current (int offset)$/
+DA	test.cc	8
+DBFILE_H	DBFile.h	2
+DBFile	DBFile.h	20
+DBFile.o	Makefile	/^DBFile.o: DBFile.cc$/
+DBFile::Add	DBFile.cc	/^void DBFile::Add (Record& addme) $/
+DBFile::Close	DBFile.cc	/^int DBFile::Close() $/
+DBFile::Create	DBFile.cc	/^int DBFile::Create (char* fpath, fType ftype, void/
+DBFile::DBFile	DBFile.cc	/^DBFile::DBFile()$/
+DBFile::GetNext	DBFile.cc	/^int DBFile::GetNext (Record& fetchme) $/
+DBFile::GetNext	DBFile.cc	/^int DBFile::GetNext (Record& fetchme, CNF& cnf, Re/
+DBFile::Load	DBFile.cc	/^void DBFile::Load (Schema& myschema, char* loadpat/
+DBFile::MoveFirst	DBFile.cc	/^void DBFile::MoveFirst() $/
+DBFile::Open	DBFile.cc	/^int DBFile::Open (char* fpath) {$/
+DBFile::createDBInstance	DBFile.cc	/^void DBFile::createDBInstance(fType ftype)$/
+DBFile::db	DBFile.h	43
+DBFile::~DBFile	DBFile.cc	/^DBFile::~DBFile()$/
+DBFileBase	DBFile.h	53
+DBFileBase::Create	DBFile.cc	/^int DBFileBase::Create(char* fpath, void* startup)/
+DBFileBase::DBFileBase	DBFile.cc	/^DBFileBase::DBFileBase()$/
+DBFileBase::GetNext	DBFile.cc	/^int DBFileBase::GetNext (Record& fetchme) $/
+DBFileBase::Load	DBFile.cc	/^void DBFileBase::Load (Schema& myschema, char* loa/
+DBFileBase::MoveFirst	DBFile.cc	/^void DBFileBase::MoveFirst() $/
+DBFileBase::Open	DBFile.cc	/^int DBFileBase::Open (char* fpath) $/
+DBFileBase::getTableName	DBFile.cc	/^std::string DBFileBase::getTableName(const char* f/
+DBFileBase::myFile	DBFile.h	60
+DBFileBase::myPage	DBFile.h	59
+DBFileBase::myRecord	DBFile.h	61
+DBFileBase::pageNo	DBFile.h	58
+DBFileBase::~DBFileBase	DBFile.cc	/^DBFileBase::~DBFileBase()$/
+DEFS_H	Defs.h	2
+DOUBLE	ParseFunc.h	7
+DOUBLE	ParseTree.h	10
+DblDivide	Function.h	11
+DblMinus	Function.h	11
+DblMultiply	Function.h	11
+DblPlus	Function.h	11
+DblUnaryMinus	Function.h	11
+Double	Defs.h	13
+DuplicateRemoval	RelOp.h	73
+DuplicateRemoval::Run	RelOp.h	/^	void Run (Pipe &inPipe, Pipe &outPipe, Schema &my/
+DuplicateRemoval::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+DuplicateRemoval::WaitUntilDone	RelOp.h	/^	void WaitUntilDone () { }$/
+ECHO	lex.yy.c	603
+ECHO	lex.yyfunc.c	613
+EOB_ACT_CONTINUE_SCAN	lex.yy.c	168
+EOB_ACT_CONTINUE_SCAN	lex.yyfunc.c	187
+EOB_ACT_END_OF_FILE	lex.yy.c	169
+EOB_ACT_END_OF_FILE	lex.yyfunc.c	188
+EOB_ACT_LAST_MATCH	lex.yy.c	170
+EOB_ACT_LAST_MATCH	lex.yyfunc.c	189
+EQUALS	ParseTree.h	7
+EXIT_SUCCESS	y.tab.c	269
+EXIT_SUCCESS	y.tab.c	297
+EXIT_SUCCESS	yyfunc.tab.c	270
+EXIT_SUCCESS	yyfunc.tab.c	298
+EmptyItOut	File.cc	/^void Page :: EmptyItOut () {$/
+Equals	Defs.h	12
+FILE_H	File.h	2
+FLEXINT_H	lex.yy.c	29
+FLEXINT_H	lex.yyfunc.c	48
+FLEX_BETA	lex.yy.c	13
+FLEX_BETA	lex.yyfunc.c	32
+FLEX_SCANNER	lex.yy.c	8
+FLEX_SCANNER	lex.yyfunc.c	27
+FUNCTION_H	Function.h	2
+File	File.cc	/^File :: File () {$/
+File	File.h	48
+File.o	Makefile	/^File.o: File.cc$/
+File::curLength	File.h	52
+File::myFilDes	File.h	51
+Find	Schema.cc	/^int Schema :: Find (char *attName) {$/
+FindType	Schema.cc	/^Type Schema :: FindType (char *attName) {$/
+Float	y.tab.c	119
+Float	y.tab.c	128
+Float	y.tab.h	44
+Float	y.tab.h	53
+Float	yyfunc.tab.c	124
+Float	yyfunc.tab.c	130
+Float	yyfunc.tab.h	41
+Float	yyfunc.tab.h	47
+FromBinary	File.cc	/^void Page :: FromBinary (char *bits) {$/
+FuncOperand	ParseFunc.h	18
+FuncOperand	ParseTree.h	56
+FuncOperator	ParseFunc.h	27
+FuncOperator	ParseTree.h	65
+Function	Function.cc	/^Function :: Function () {$/
+Function	Function.h	20
+Function.o	Makefile	/^Function.o: Function.cc$/
+Function::numOps	Function.h	25
+Function::opList	Function.h	24
+Function::returnsInt	Function.h	27
+GREATER_THAN	ParseTree.h	6
+GetAtts	Schema.cc	/^Attribute *Schema :: GetAtts () {$/
+GetBits	Record.cc	/^char* Record :: GetBits (void) {$/
+GetFirst	File.cc	/^int Page :: GetFirst (Record *firstOne) {$/
+GetLength	File.cc	/^off_t File :: GetLength () {$/
+GetNumAtts	Schema.cc	/^int Schema :: GetNumAtts () {$/
+GetPage	File.cc	/^void File :: GetPage (Page *putItHere, off_t which/
+GetRecordSize	BigQ.cc	/^int GetRecordSize (Record* r)$/
+GetSortOrders	Comparison.cc	/^int CNF :: GetSortOrders (OrderMaker &left, OrderM/
+GreaterThan	Defs.h	12
+GroupBy	RelOp.h	85
+GroupBy::Run	RelOp.h	/^	void Run (Pipe &inPipe, Pipe &outPipe, OrderMaker/
+GroupBy::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+GroupBy::WaitUntilDone	RelOp.h	/^	void WaitUntilDone () { }$/
+GrowFromParseTree	Comparison.cc	/^void CNF :: GrowFromParseTree (struct AndList *par/
+GrowFromParseTree	Comparison.cc	/^void CNF :: GrowFromParseTree (struct AndList *par/
+GrowFromParseTree	Function.cc	/^void Function :: GrowFromParseTree (struct FuncOpe/
+HEAP_FILE_H_	HeapFile.h	2
+HeapFile	HeapFile.h	6
+HeapFile.o	Makefile	/^HeapFile.o: HeapFile.cc$/
+HeapFile::Add	HeapFile.cc	/^void HeapFile::Add (Record& addme) {$/
+HeapFile::Close	HeapFile.cc	/^int HeapFile::Close () {  $/
+HeapFile::DBFileBase::GetNext	HeapFile.h	9
+HeapFile::GetNext	HeapFile.cc	/^int HeapFile::GetNext (Record &fetchme, CNF &cnf, /
+HeapFile::HeapFile	HeapFile.cc	/^HeapFile::HeapFile() {}$/
+HeapFile::~HeapFile	HeapFile.h	/^  ~HeapFile() {}$/
+IA	test.cc	6
+INITIAL	lex.yy.c	511
+INITIAL	lex.yyfunc.c	521
+INT	ParseFunc.h	11
+INT	ParseTree.h	11
+INT16_MAX	lex.yy.c	71
+INT16_MAX	lex.yyfunc.c	90
+INT16_MIN	lex.yy.c	62
+INT16_MIN	lex.yyfunc.c	81
+INT32_MAX	lex.yy.c	74
+INT32_MAX	lex.yyfunc.c	93
+INT32_MIN	lex.yy.c	65
+INT32_MIN	lex.yyfunc.c	84
+INT8_MAX	lex.yy.c	68
+INT8_MAX	lex.yyfunc.c	87
+INT8_MIN	lex.yy.c	59
+INT8_MIN	lex.yyfunc.c	78
+Insert	Pipe.cc	/^void Pipe :: Insert (Record *insertMe) {$/
+Insert	TwoWayList.cc	/^TwoWayList <Type> :: Insert (Type *Item)$/
+Int	Defs.h	13
+Int	y.tab.c	120
+Int	y.tab.c	129
+Int	y.tab.h	45
+Int	y.tab.h	54
+Int	yyfunc.tab.c	125
+Int	yyfunc.tab.c	131
+Int	yyfunc.tab.h	42
+Int	yyfunc.tab.h	48
+IntDivide	Function.h	10
+IntMinus	Function.h	10
+IntMultiply	Function.h	10
+IntPlus	Function.h	10
+IntUnaryMinus	Function.h	10
+Join	RelOp.h	67
+Join::Run	RelOp.h	/^	void Run (Pipe &inPipeL, Pipe &inPipeR, Pipe &out/
+Join::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+Join::WaitUntilDone	RelOp.h	/^	void WaitUntilDone () { }$/
+LESS_THAN	ParseTree.h	5
+Left	Defs.h	11
+LeftLength	TwoWayList.cc	/^TwoWayList <Type> :: LeftLength ()$/
+LessThan	Defs.h	12
+Literal	Defs.h	11
+Literal	Parser.y	135
+MAX_ANDS	Defs.h	5
+MAX_DEPTH	Function.h	6
+MAX_ORS	Defs.h	6
+MergeRecords	Record.cc	/^void Record :: MergeRecords (Record *left, Record /
+MoveToFinish	TwoWayList.cc	/^TwoWayList <Type> :: MoveToFinish ()$/
+MoveToStart	TwoWayList.cc	/^TwoWayList <Type> :: MoveToStart ()$/
+Mtest.cc	test.cc	/^int main (int argc, char *argv[]) {$/
+NAME	ParseFunc.h	15
+NAME	ParseTree.h	13
+Name	y.tab.c	117
+Name	y.tab.c	126
+Name	y.tab.h	42
+Name	y.tab.h	51
+Name	yyfunc.tab.c	123
+Name	yyfunc.tab.c	129
+Name	yyfunc.tab.h	40
+Name	yyfunc.tab.h	46
+OR	y.tab.c	115
+OR	y.tab.c	124
+OR	y.tab.h	40
+OR	y.tab.h	49
+Op	ParserFunc.y	101
+Op	Parser.y	113
+Open	File.cc	/^void File :: Open (int fileLen, char *fName) {$/
+Operand	ParseTree.h	15
+OrList	Parser.y	80
+OrList	ParseTree.h	35
+OrderMaker	Comparison.cc	/^OrderMaker :: OrderMaker() {$/
+OrderMaker	Comparison.cc	/^OrderMaker :: OrderMaker(Schema *schema) {$/
+OrderMaker	Comparison.h	45
+OrderMaker::numAtts	Comparison.h	51
+OrderMaker::whichAtts	Comparison.h	53
+OrderMaker::whichTypes	Comparison.h	54
+PAGE_SIZE	Defs.h	8
+PARSE_TREE_H	ParseTree.h	2
+PIPE_H	Pipe.h	2
+Page	File.cc	/^Page :: Page () {$/
+Page	File.h	14
+Page::curSizeInBytes	File.h	19
+Page::myRecs	File.h	16
+Page::numRecs	File.h	18
+ParseFunc	ParseFunc.h	3
+Pipe	Pipe.cc	/^Pipe :: Pipe (int bufferSize) {$/
+Pipe	Pipe.h	9
+Pipe.o	Makefile	/^Pipe.o: Pipe.cc$/
+Pipe::buffered	Pipe.h	13
+Pipe::consumerVar	Pipe.h	26
+Pipe::done	Pipe.h	19
+Pipe::firstSlot	Pipe.h	15
+Pipe::lastSlot	Pipe.h	16
+Pipe::pipeMutex	Pipe.h	22
+Pipe::producerVar	Pipe.h	25
+Pipe::totSpace	Pipe.h	17
+Print	Comparison.cc	/^void Comparison :: Print () {$/
+Print	Comparison.cc	/^void OrderMaker :: Print () {$/
+Print	Comparison.cc	/^void CNF :: Print () {$/
+Print	Function.cc	/^void Function :: Print () {$/
+Print	Record.cc	/^void Record :: Print (Schema *mySchema) {$/
+Project	Record.cc	/^void Record :: Project (int *attsToKeep, int numAt/
+Project	RelOp.h	61
+Project::Run	RelOp.h	/^	void Run (Pipe &inPipe, Pipe &outPipe, int *keepM/
+Project::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+Project::WaitUntilDone	RelOp.h	/^	void WaitUntilDone () { }$/
+PushDouble	Function.h	9
+PushInt	Function.h	9
+RECORD_H	Record.h	2
+REJECT	lex.yy.c	469
+REJECT	lex.yyfunc.c	480
+REL_OP_H	RelOp.h	2
+Record	Record.cc	/^Record :: Record () {$/
+Record	Record.h	24
+Record.o	Makefile	/^Record.o: Record.cc$/
+Record::bits	Record.h	34
+RecursivelyBuild	Function.cc	/^Type Function :: RecursivelyBuild (struct FuncOper/
+RelOp.o	Makefile	/^RelOp.o: RelOp.cc$/
+RelationalOp	RelOp.h	26
+Remove	Pipe.cc	/^int Pipe :: Remove (Record *removeMe) {$/
+Remove	TwoWayList.cc	/^TwoWayList <Type> :: Remove (Type *Item)$/
+Retreat	TwoWayList.cc	/^TwoWayList <Type> :: Retreat ()$/
+Right	Defs.h	11
+RightLength	TwoWayList.cc	/^TwoWayList <Type> :: RightLength ()$/
+Run	ComparisonEngine.cc	/^int ComparisonEngine :: Run (Record *left, Record /
+Run	ComparisonEngine.cc	/^int ComparisonEngine :: Run (Record *left, Record /
+RÔ£πû	test.out	/^“RÔ£πûp∏yIk∂(E’L9ÚãL«Ã–çY@Ò~û÷sº:RLt’gUaòCù/
+S	Schema.o	21
+SA	test.cc	7
+SCHEMA_H	Schema.h	3
+SF_c	test.cc	41
+SF_li	test.cc	41
+SF_o	test.cc	41
+SF_p	test.cc	41
+SF_ps	test.cc	41
+SF_s	test.cc	41
+SORTED_FILE_H_	SortedFile.h	2
+STRING	ParseTree.h	12
+Schema	Schema.cc	/^Schema :: Schema (char *fpath, int num_atts, Attri/
+Schema	Schema.cc	/^Schema :: Schema (char *fName, char *relName) {$/
+Schema	Schema.h	23
+Schema.o	Makefile	/^Schema.o: Schema.cc$/
+Schema::fileName	Schema.h	30
+Schema::myAtts	Schema.h	27
+Schema::numAtts	Schema.h	26
+SelectFile	RelOp.h	36
+SelectFile::Run	RelOp.cc	/^void SelectFile::Run (DBFile &inFile, Pipe &outPip/
+SelectFile::SelectFileThread	RelOp.h	45
+SelectFile::Use_n_Pages	RelOp.cc	/^void SelectFile::Use_n_Pages (int runlen) {$/
+SelectFile::WaitUntilDone	RelOp.cc	/^void SelectFile::WaitUntilDone() {$/
+SelectFromFile	RelOp.cc	/^void * SelectFromFile (void *sfParams) {$/
+SelectFromFileParams	RelOp.h	21
+SelectFromPipe	RelOp.cc	/^void * SelectFromPipe (void *spParams) {$/
+SelectFromPipeParams	RelOp.h	14
+SelectPipe	RelOp.h	52
+SelectPipe::Run	RelOp.cc	/^void SelectPipe::Run (Pipe &inPipe, Pipe &outPipe,/
+SelectPipe::SelectPipeThread	RelOp.h	56
+SelectPipe::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+SelectPipe::WaitUntilDone	RelOp.cc	/^void SelectPipe::WaitUntilDone() {$/
+SetBits	Record.cc	/^void Record :: SetBits (char *bits) {$/
+ShutDown	Pipe.cc	/^void Pipe :: ShutDown () {$/
+SimpleExp	ParserFunc.y	123
+SortedFile	SortedFile.h	19
+SortedFile.o	Makefile	/^SortedFile.o: SortedFile.cc$/
+SortedFile::Add	SortedFile.cc	/^void SortedFile::Add (Record& addme) $/
+SortedFile::Close	SortedFile.cc	/^int SortedFile::Close() $/
+SortedFile::Create	SortedFile.cc	/^int SortedFile::Create (char* fpath, void* startup/
+SortedFile::DBFileBase::GetNext	SortedFile.h	22
+SortedFile::GetNext	SortedFile.cc	/^int SortedFile::GetNext (Record& fetchme) $/
+SortedFile::GetNext	SortedFile.cc	/^int SortedFile::GetNext (Record& fetchme, CNF& cnf/
+SortedFile::Load	SortedFile.cc	/^void SortedFile::Load (Schema& myschema, char* loa/
+SortedFile::Mode	SortedFile.h	40
+SortedFile::Mode::READ	SortedFile.h	40
+SortedFile::Mode::WRITE	SortedFile.h	40
+SortedFile::MoveFirst	SortedFile.cc	/^void SortedFile::MoveFirst () $/
+SortedFile::Open	SortedFile.cc	/^int SortedFile::Open (char* fpath) $/
+SortedFile::PIPE_BUFFER_SIZE	SortedFile.h	20
+SortedFile::SortedFile	SortedFile.cc	/^SortedFile::SortedFile()$/
+SortedFile::binarySearch	SortedFile.cc	/^int SortedFile::binarySearch(Record& fetchme, Orde/
+SortedFile::biq	SortedFile.h	39
+SortedFile::buildQuery	SortedFile.cc	/^void SortedFile::buildQuery(const OrderMaker& sort/
+SortedFile::destroyBigQ	SortedFile.cc	/^void SortedFile::destroyBigQ()$/
+SortedFile::fMode	SortedFile.h	40
+SortedFile::findAttIdx	SortedFile.cc	/^int SortedFile::findAttIdx(int att, const CNF& que/
+SortedFile::in	SortedFile.h	38
+SortedFile::initBigQ	SortedFile.cc	/^void SortedFile::initBigQ()$/
+SortedFile::merge	SortedFile.cc	/^void SortedFile::merge() $/
+SortedFile::metafName	SortedFile.cc	/^const char* SortedFile::metafName() const $/
+SortedFile::myOrder	SortedFile.h	42
+SortedFile::myOrderAlloc	SortedFile.h	47
+SortedFile::omObj	SortedFile.h	41
+SortedFile::out	SortedFile.h	38
+SortedFile::pOrder	SortedFile.h	41
+SortedFile::rLen	SortedFile.h	41
+SortedFile::runLength	SortedFile.h	43
+SortedFile::setRead	SortedFile.cc	/^void SortedFile::setRead() $/
+SortedFile::setWrite	SortedFile.cc	/^void SortedFile::setWrite() $/
+SortedFile::table	SortedFile.h	45
+SortedFile::tpath	SortedFile.h	44
+SortedFile::~SortedFile	SortedFile.cc	/^SortedFile::~SortedFile()$/
+String	Defs.h	13
+String	y.tab.c	118
+String	y.tab.c	127
+String	y.tab.h	43
+String	y.tab.h	52
+SuckNextRecord	Record.cc	/^int Record :: SuckNextRecord (Schema *mySchema, FI/
+Sum	RelOp.h	79
+Sum::Run	RelOp.h	/^	void Run (Pipe &inPipe, Pipe &outPipe, Function &/
+Sum::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+Sum::WaitUntilDone	RelOp.h	/^	void WaitUntilDone () { }$/
+SwapLefts	TwoWayList.cc	/^TwoWayList <Type> :: SwapLefts (TwoWayList & List)/
+SwapRights	TwoWayList.cc	/^TwoWayList <Type> :: SwapRights (TwoWayList & List/
+T	Function.o	43
+T	SortedFile.o	81
+TEST_H	test.h	2
+Target	Defs.h	11
+ToBinary	File.cc	/^void Page :: ToBinary (char *bits) {$/
+ToDouble	Function.h	9
+ToDouble2Down	Function.h	9
+TwoWayList	TwoWayList.cc	/^TwoWayList <Type> :: TwoWayList (TwoWayList &me) {/
+TwoWayList	TwoWayList.cc	/^TwoWayList <Type> :: TwoWayList ()$/
+TwoWayList	TwoWayList.h	6
+TwoWayList::Header	TwoWayList.h	66
+TwoWayList::Header::current	TwoWayList.h	70
+TwoWayList::Header::first	TwoWayList.h	68
+TwoWayList::Header::last	TwoWayList.h	69
+TwoWayList::Header::leftSize	TwoWayList.h	71
+TwoWayList::Header::rightSize	TwoWayList.h	72
+TwoWayList::Node	TwoWayList.h	49
+TwoWayList::Node::Node	TwoWayList.h	/^			Node () : data (0), next (0), previous (0) {}$/
+TwoWayList::Node::data	TwoWayList.h	51
+TwoWayList::Node::next	TwoWayList.h	52
+TwoWayList::Node::previous	TwoWayList.h	53
+TwoWayList::Node::~Node	TwoWayList.h	/^			~Node () $/
+TwoWayList::list	TwoWayList.h	76
+Type	Defs.h	13
+UINT16_MAX	lex.yy.c	80
+UINT16_MAX	lex.yyfunc.c	99
+UINT32_MAX	lex.yy.c	83
+UINT32_MAX	lex.yyfunc.c	102
+UINT8_MAX	lex.yy.c	77
+UINT8_MAX	lex.yyfunc.c	96
+UQytX1	ComparisonEngine.o	48
+W	HeapFile.o	2
+WriteOut	RelOp.h	91
+WriteOut::Run	RelOp.h	/^	void Run (Pipe &inPipe, FILE *outFile, Schema &my/
+WriteOut::Use_n_Pages	RelOp.h	/^	void Use_n_Pages (int n) { }$/
+WriteOut::WaitUntilDone	RelOp.h	/^	void WaitUntilDone () { }$/
+Y	Comparison.o	50
+YYABORT	y.tab.c	561
+YYABORT	yyfunc.tab.c	558
+YYACCEPT	y.tab.c	560
+YYACCEPT	yyfunc.tab.c	557
+YYBACKUP	y.tab.c	/^#define YYBACKUP(Token, Value)					\\$/
+YYBACKUP	yyfunc.tab.c	/^#define YYBACKUP(Token, Value)					\\$/
+YYBISON	y.tab.c	44
+YYBISON	yyfunc.tab.c	44
+YYBISON_VERSION	y.tab.c	47
+YYBISON_VERSION	yyfunc.tab.c	47
+YYCASE_	y.tab.c	/^# define YYCASE_(N, S)                      \\$/
+YYCASE_	y.tab.c	1024
+YYCASE_	yyfunc.tab.c	/^# define YYCASE_(N, S)                      \\$/
+YYCASE_	yyfunc.tab.c	1021
+YYCOPY	y.tab.c	/^#   define YYCOPY(To, From, Count) \\$/
+YYCOPY	y.tab.c	/^#   define YYCOPY(To, From, Count)		\\$/
+YYCOPY	yyfunc.tab.c	/^#   define YYCOPY(To, From, Count) \\$/
+YYCOPY	yyfunc.tab.c	/^#   define YYCOPY(To, From, Count)		\\$/
+YYCOPY_NEEDED	y.tab.c	338
+YYCOPY_NEEDED	yyfunc.tab.c	339
+YYDEBUG	y.tab.c	92
+YYDEBUG	yyfunc.tab.c	100
+YYDPRINTF	y.tab.c	/^# define YYDPRINTF(Args)			\\$/
+YYDPRINTF	y.tab.c	/^# define YYDPRINTF(Args)$/
+YYDPRINTF	yyfunc.tab.c	/^# define YYDPRINTF(Args)			\\$/
+YYDPRINTF	yyfunc.tab.c	/^# define YYDPRINTF(Args)$/
+YYEMPTY	y.tab.c	557
+YYEMPTY	yyfunc.tab.c	554
+YYEOF	y.tab.c	558
+YYEOF	yyfunc.tab.c	555
+YYERRCODE	y.tab.c	600
+YYERRCODE	yyfunc.tab.c	597
+YYERROR	y.tab.c	562
+YYERROR	yyfunc.tab.c	559
+YYERROR_VERBOSE	y.tab.c	97
+YYERROR_VERBOSE	y.tab.c	98
+YYERROR_VERBOSE	y.tab.c	100
+YYERROR_VERBOSE	yyfunc.tab.c	105
+YYERROR_VERBOSE	yyfunc.tab.c	106
+YYERROR_VERBOSE	yyfunc.tab.c	108
+YYERROR_VERBOSE_ARGS_MAXIMUM	y.tab.c	941
+YYERROR_VERBOSE_ARGS_MAXIMUM	yyfunc.tab.c	938
+YYFAIL	y.tab.c	572
+YYFAIL	yyfunc.tab.c	569
+YYFINAL	y.tab.c	379
+YYFINAL	yyfunc.tab.c	380
+YYFPRINTF	y.tab.c	649
+YYFPRINTF	yyfunc.tab.c	646
+YYFREE	y.tab.c	308
+YYFREE	yyfunc.tab.c	309
+YYID	y.tab.c	/^# define YYID(n) (n)$/
+YYID	y.tab.c	/^YYID (int yyi)$/
+YYID	yyfunc.tab.c	/^# define YYID(n) (n)$/
+YYID	yyfunc.tab.c	/^YYID (int yyi)$/
+YYINITDEPTH	y.tab.c	810
+YYINITDEPTH	yyfunc.tab.c	807
+YYLAST	y.tab.c	381
+YYLAST	yyfunc.tab.c	382
+YYLEX	y.tab.c	639
+YYLEX	y.tab.c	641
+YYLEX	yyfunc.tab.c	636
+YYLEX	yyfunc.tab.c	638
+YYLLOC_DEFAULT	y.tab.c	/^# define YYLLOC_DEFAULT(Current, Rhs, N)				\\$/
+YYLLOC_DEFAULT	yyfunc.tab.c	/^# define YYLLOC_DEFAULT(Current, Rhs, N)				\\$/
+YYLSP_NEEDED	y.tab.c	62
+YYLSP_NEEDED	yyfunc.tab.c	62
+YYMALLOC	y.tab.c	301
+YYMALLOC	yyfunc.tab.c	302
+YYMAXDEPTH	y.tab.c	821
+YYMAXDEPTH	yyfunc.tab.c	818
+YYMAXUTOK	y.tab.c	394
+YYMAXUTOK	yyfunc.tab.c	395
+YYNNTS	y.tab.c	386
+YYNNTS	yyfunc.tab.c	387
+YYNRULES	y.tab.c	388
+YYNRULES	yyfunc.tab.c	389
+YYNSTATES	y.tab.c	390
+YYNSTATES	yyfunc.tab.c	391
+YYNTOKENS	y.tab.c	384
+YYNTOKENS	yyfunc.tab.c	385
+YYPACT_NINF	y.tab.c	510
+YYPACT_NINF	yyfunc.tab.c	509
+YYPOPSTACK	y.tab.c	/^#define YYPOPSTACK(N)   (yyvsp -= (N), yyssp -= (N/
+YYPOPSTACK	yyfunc.tab.c	/^#define YYPOPSTACK(N)   (yyvsp -= (N), yyssp -= (N/
+YYPULL	y.tab.c	59
+YYPULL	yyfunc.tab.c	59
+YYPURE	y.tab.c	53
+YYPURE	yyfunc.tab.c	53
+YYPUSH	y.tab.c	56
+YYPUSH	yyfunc.tab.c	56
+YYRECOVERING	y.tab.c	/^#define YYRECOVERING()  (!!yyerrstatus)$/
+YYRECOVERING	yyfunc.tab.c	/^#define YYRECOVERING()  (!!yyerrstatus)$/
+YYRHSLOC	y.tab.c	/^#define YYRHSLOC(Rhs, K) ((Rhs)[K])$/
+YYRHSLOC	yyfunc.tab.c	/^#define YYRHSLOC(Rhs, K) ((Rhs)[K])$/
+YYSIZE_MAXIMUM	y.tab.c	209
+YYSIZE_MAXIMUM	yyfunc.tab.c	210
+YYSIZE_T	y.tab.c	197
+YYSIZE_T	y.tab.c	199
+YYSIZE_T	y.tab.c	203
+YYSIZE_T	y.tab.c	205
+YYSIZE_T	yyfunc.tab.c	198
+YYSIZE_T	yyfunc.tab.c	200
+YYSIZE_T	yyfunc.tab.c	204
+YYSIZE_T	yyfunc.tab.c	206
+YYSKELETON_NAME	y.tab.c	50
+YYSKELETON_NAME	yyfunc.tab.c	50
+YYSTACK_ALLOC	y.tab.c	255
+YYSTACK_ALLOC	y.tab.c	259
+YYSTACK_ALLOC	y.tab.c	264
+YYSTACK_ALLOC	y.tab.c	287
+YYSTACK_ALLOC	yyfunc.tab.c	256
+YYSTACK_ALLOC	yyfunc.tab.c	260
+YYSTACK_ALLOC	yyfunc.tab.c	265
+YYSTACK_ALLOC	yyfunc.tab.c	288
+YYSTACK_ALLOC_MAXIMUM	y.tab.c	284
+YYSTACK_ALLOC_MAXIMUM	y.tab.c	290
+YYSTACK_ALLOC_MAXIMUM	yyfunc.tab.c	285
+YYSTACK_ALLOC_MAXIMUM	yyfunc.tab.c	291
+YYSTACK_BYTES	y.tab.c	/^# define YYSTACK_BYTES(N) \\$/
+YYSTACK_BYTES	yyfunc.tab.c	/^# define YYSTACK_BYTES(N) \\$/
+YYSTACK_FREE	y.tab.c	/^#  define YYSTACK_FREE(Ptr) do { \/* empty *\/; } wh/
+YYSTACK_FREE	y.tab.c	288
+YYSTACK_FREE	yyfunc.tab.c	/^#  define YYSTACK_FREE(Ptr) do { \/* empty *\/; } wh/
+YYSTACK_FREE	yyfunc.tab.c	289
+YYSTACK_GAP_MAXIMUM	y.tab.c	330
+YYSTACK_GAP_MAXIMUM	yyfunc.tab.c	331
+YYSTACK_RELOCATE	y.tab.c	/^# define YYSTACK_RELOCATE(Stack_alloc, Stack)				\\/
+YYSTACK_RELOCATE	y.tab.c	1267
+YYSTACK_RELOCATE	yyfunc.tab.c	/^# define YYSTACK_RELOCATE(Stack_alloc, Stack)				\\/
+YYSTACK_RELOCATE	yyfunc.tab.c	1264
+YYSTATE	lex.yy.c	132
+YYSTATE	lex.yyfunc.c	151
+YYSTYPE	y.tab.c	135
+YYSTYPE	y.tab.c	151
+YYSTYPE	y.tab.h	60
+YYSTYPE	y.tab.h	76
+YYSTYPE	yyfunc.tab.c	137
+YYSTYPE	yyfunc.tab.c	152
+YYSTYPE	yyfunc.tab.h	54
+YYSTYPE	yyfunc.tab.h	69
+YYSTYPE_IS_DECLARED	y.tab.c	154
+YYSTYPE_IS_DECLARED	y.tab.h	79
+YYSTYPE_IS_DECLARED	yyfunc.tab.c	155
+YYSTYPE_IS_DECLARED	yyfunc.tab.h	72
+YYSTYPE_IS_TRIVIAL	y.tab.c	152
+YYSTYPE_IS_TRIVIAL	y.tab.h	77
+YYSTYPE_IS_TRIVIAL	yyfunc.tab.c	153
+YYSTYPE_IS_TRIVIAL	yyfunc.tab.h	70
+YYSYNTAX_ERROR	y.tab.c	1602
+YYSYNTAX_ERROR	y.tab.c	1631
+YYSYNTAX_ERROR	yyfunc.tab.c	1583
+YYSYNTAX_ERROR	yyfunc.tab.c	1612
+YYTABLES_NAME	lex.yy.c	1874
+YYTABLES_NAME	lex.yyfunc.c	1860
+YYTABLE_NINF	y.tab.c	527
+YYTABLE_NINF	yyfunc.tab.c	525
+YYTERROR	y.tab.c	599
+YYTERROR	yyfunc.tab.c	596
+YYTOKENTYPE	y.tab.c	111
+YYTOKENTYPE	y.tab.h	36
+YYTOKENTYPE	yyfunc.tab.c	119
+YYTOKENTYPE	yyfunc.tab.h	36
+YYTOKEN_TABLE	y.tab.c	105
+YYTOKEN_TABLE	yyfunc.tab.c	113
+YYTRANSLATE	y.tab.c	/^#define YYTRANSLATE(YYX)						\\$/
+YYTRANSLATE	yyfunc.tab.c	/^#define YYTRANSLATE(YYX)						\\$/
+YYUNDEFTOK	y.tab.c	393
+YYUNDEFTOK	yyfunc.tab.c	394
+YYUSE	y.tab.c	/^# define YYUSE(e) ((void) (e))$/
+YYUSE	y.tab.c	/^# define YYUSE(e) \/* empty *\/$/
+YYUSE	yyfunc.tab.c	/^# define YYUSE(e) ((void) (e))$/
+YYUSE	yyfunc.tab.c	/^# define YYUSE(e) \/* empty *\/$/
+YY_	y.tab.c	/^#   define YY_(msgid) dgettext ("bison-runtime", m/
+YY_	y.tab.c	/^#  define YY_(msgid) msgid$/
+YY_	yyfunc.tab.c	/^#   define YY_(msgid) dgettext ("bison-runtime", m/
+YY_	yyfunc.tab.c	/^#  define YY_(msgid) msgid$/
+YY_AT_BOL	lex.yy.c	/^#define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_/
+YY_AT_BOL	lex.yyfunc.c	/^#define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_/
+YY_BREAK	lex.yy.c	682
+YY_BREAK	lex.yyfunc.c	692
+YY_BUFFER_EOF_PENDING	lex.yy.c	255
+YY_BUFFER_EOF_PENDING	lex.yyfunc.c	274
+YY_BUFFER_NEW	lex.yy.c	243
+YY_BUFFER_NEW	lex.yyfunc.c	262
+YY_BUFFER_NORMAL	lex.yy.c	244
+YY_BUFFER_NORMAL	lex.yyfunc.c	263
+YY_BUFFER_STATE	lex.yy.c	161
+YY_BUFFER_STATE	lex.yyfunc.c	180
+YY_BUF_SIZE	lex.yy.c	149
+YY_BUF_SIZE	lex.yy.c	151
+YY_BUF_SIZE	lex.yyfunc.c	168
+YY_BUF_SIZE	lex.yyfunc.c	170
+YY_CHAR	lex.yy.c	343
+YY_CHAR	lex.yyfunc.c	362
+YY_CURRENT_BUFFER	lex.yy.c	271
+YY_CURRENT_BUFFER	lex.yyfunc.c	290
+YY_CURRENT_BUFFER_LVALUE	lex.yy.c	278
+YY_CURRENT_BUFFER_LVALUE	lex.yyfunc.c	297
+YY_DECL	lex.yy.c	670
+YY_DECL	lex.yyfunc.c	680
+YY_DECL_IS_OURS	lex.yy.c	666
+YY_DECL_IS_OURS	lex.yyfunc.c	676
+YY_DO_BEFORE_ACTION	lex.yy.c	364
+YY_DO_BEFORE_ACTION	lex.yyfunc.c	383
+YY_END_OF_BUFFER	lex.yy.c	373
+YY_END_OF_BUFFER	lex.yyfunc.c	391
+YY_END_OF_BUFFER_CHAR	lex.yy.c	140
+YY_END_OF_BUFFER_CHAR	lex.yyfunc.c	159
+YY_EXIT_FAILURE	lex.yy.c	1672
+YY_EXIT_FAILURE	lex.yyfunc.c	1658
+YY_EXTRA_TYPE	lex.yy.c	522
+YY_EXTRA_TYPE	lex.yyfunc.c	532
+YY_FATAL_ERROR	lex.yy.c	/^#define YY_FATAL_ERROR(msg) yy_fatal_error( msg )$/
+YY_FATAL_ERROR	lex.yyfunc.c	/^#define YY_FATAL_ERROR(msg) yy_fatal_error( msg )$/
+YY_FLEX_MAJOR_VERSION	lex.yy.c	9
+YY_FLEX_MAJOR_VERSION	lex.yyfunc.c	28
+YY_FLEX_MINOR_VERSION	lex.yy.c	10
+YY_FLEX_MINOR_VERSION	lex.yyfunc.c	29
+YY_FLEX_SUBMINOR_VERSION	lex.yy.c	11
+YY_FLEX_SUBMINOR_VERSION	lex.yyfunc.c	30
+YY_FLUSH_BUFFER	lex.yy.c	307
+YY_FLUSH_BUFFER	lex.yyfunc.c	326
+YY_INPUT	lex.yy.c	/^#define YY_INPUT(buf,result,max_size) \\$/
+YY_INPUT	lex.yyfunc.c	/^#define YY_INPUT(buf,result,max_size) \\$/
+YY_INT_ALIGNED	lex.yy.c	4
+YY_INT_ALIGNED	lex.yyfunc.c	4
+YY_LESS_LINENO	lex.yy.c	/^    #define YY_LESS_LINENO(n)$/
+YY_LESS_LINENO	lex.yyfunc.c	/^    #define YY_LESS_LINENO(n)$/
+YY_LOCATION_PRINT	y.tab.c	/^# define YY_LOCATION_PRINT(File, Loc) ((void) 0)$/
+YY_LOCATION_PRINT	yyfunc.tab.c	/^# define YY_LOCATION_PRINT(File, Loc) ((void) 0)$/
+YY_MORE_ADJ	lex.yy.c	473
+YY_MORE_ADJ	lex.yyfunc.c	482
+YY_NEW_FILE	lex.yy.c	138
+YY_NEW_FILE	lex.yyfunc.c	157
+YY_NULL	lex.yy.c	112
+YY_NULL	lex.yyfunc.c	131
+YY_NUM_RULES	lex.yy.c	372
+YY_NUM_RULES	lex.yyfunc.c	390
+YY_READ_BUF_SIZE	lex.yy.c	592
+YY_READ_BUF_SIZE	lex.yy.c	594
+YY_READ_BUF_SIZE	lex.yyfunc.c	602
+YY_READ_BUF_SIZE	lex.yyfunc.c	604
+YY_REDUCE_PRINT	y.tab.c	/^# define YY_REDUCE_PRINT(Rule)		\\$/
+YY_REDUCE_PRINT	y.tab.c	/^# define YY_REDUCE_PRINT(Rule)$/
+YY_REDUCE_PRINT	yyfunc.tab.c	/^# define YY_REDUCE_PRINT(Rule)		\\$/
+YY_REDUCE_PRINT	yyfunc.tab.c	/^# define YY_REDUCE_PRINT(Rule)$/
+YY_RESTORE_YY_MORE_OFFSET	lex.yy.c	474
+YY_RESTORE_YY_MORE_OFFSET	lex.yyfunc.c	483
+YY_RULE_SETUP	lex.yy.c	685
+YY_RULE_SETUP	lex.yyfunc.c	695
+YY_SC_TO_UI	lex.yy.c	/^#define YY_SC_TO_UI(c) ((unsigned int) (unsigned c/
+YY_SC_TO_UI	lex.yyfunc.c	/^#define YY_SC_TO_UI(c) ((unsigned int) (unsigned c/
+YY_STACK_PRINT	y.tab.c	/^# define YY_STACK_PRINT(Bottom, Top)				\\$/
+YY_STACK_PRINT	y.tab.c	/^# define YY_STACK_PRINT(Bottom, Top)$/
+YY_STACK_PRINT	yyfunc.tab.c	/^# define YY_STACK_PRINT(Bottom, Top)				\\$/
+YY_STACK_PRINT	yyfunc.tab.c	/^# define YY_STACK_PRINT(Bottom, Top)$/
+YY_START	lex.yy.c	131
+YY_START	lex.yyfunc.c	150
+YY_START_STACK_INCR	lex.yy.c	652
+YY_START_STACK_INCR	lex.yyfunc.c	662
+YY_STATE_BUF_SIZE	lex.yy.c	157
+YY_STATE_BUF_SIZE	lex.yyfunc.c	176
+YY_STATE_EOF	lex.yy.c	/^#define YY_STATE_EOF(state) (YY_END_OF_BUFFER + st/
+YY_STATE_EOF	lex.yyfunc.c	/^#define YY_STATE_EOF(state) (YY_END_OF_BUFFER + st/
+YY_STRUCT_YY_BUFFER_STATE	lex.yy.c	196
+YY_STRUCT_YY_BUFFER_STATE	lex.yyfunc.c	215
+YY_SYMBOL_PRINT	y.tab.c	/^# define YY_SYMBOL_PRINT(Title, Type, Value, Locat/
+YY_SYMBOL_PRINT	y.tab.c	/^# define YY_SYMBOL_PRINT(Title, Type, Value, Locat/
+YY_SYMBOL_PRINT	yyfunc.tab.c	/^# define YY_SYMBOL_PRINT(Title, Type, Value, Locat/
+YY_SYMBOL_PRINT	yyfunc.tab.c	/^# define YY_SYMBOL_PRINT(Title, Type, Value, Locat/
+YY_TYPEDEF_YY_BUFFER_STATE	lex.yy.c	160
+YY_TYPEDEF_YY_BUFFER_STATE	lex.yyfunc.c	179
+YY_TYPEDEF_YY_SIZE_T	lex.yy.c	191
+YY_TYPEDEF_YY_SIZE_T	lex.yyfunc.c	210
+YY_USER_ACTION	lex.yy.c	677
+YY_USER_ACTION	lex.yyfunc.c	687
+YY_USE_CONST	lex.yy.c	93
+YY_USE_CONST	lex.yy.c	100
+YY_USE_CONST	lex.yyfunc.c	112
+YY_USE_CONST	lex.yyfunc.c	119
+Yï	part.bin	108
+_ENGINE	ComparisonEngine.h	2
+_TWO_WAY_LIST_C	TwoWayList.cc	2
+_TWO_WAY_LIST_H	TwoWayList.h	2
+__STDC_LIMIT_MACROS	lex.yy.c	39
+__STDC_LIMIT_MACROS	lex.yyfunc.c	58
+a1-test.o	Makefile	/^a1-test.o: a1-test.cc$/
+a1test.out	Makefile	/^a1test.out: Record.o Comparison.o ComparisonEngine/
+a2-2test.o	Makefile	/^a2-2test.o: a2-2test.cc$/
+a2-2test.out	Makefile	/^a2-2test.out: Record.o Comparison.o ComparisonEngi/
+a2-test.o	Makefile	/^a2-test.o: a2-test.cc$/
+a2test.out	Makefile	/^a2test.out: Record.o Comparison.o ComparisonEngine/
+a@ina	partsupp.bin	227
+actualChars	ParserFunc.y	23
+actualChars	Parser.y	25
+alloca	y.tab.c	262
+alloca	yyfunc.tab.c	263
+att_pair	Schema.h	12
+aé@gul	partsupp.bin	145
+buffsz	test.cc	39
+busy	partsupp.bin	124
+c	test.h	163
+cAtts	test.cc	53
+catalog_path	test.h	20
+clean	Makefile	/^clean: $/
+cleanup	test.h	/^void cleanup () {$/
+clear_pipe	test.cc	/^int clear_pipe (Pipe &in_pipe, Schema *schema, boo/
+clear_pipe	test.cc	/^int clear_pipe (Pipe &in_pipe, Schema *schema, Fun/
+cnf_c	test.cc	44
+cnf_li	test.cc	44
+cnf_o	test.cc	44
+cnf_p	test.cc	44
+cnf_ps	test.cc	44
+cnf_s	test.cc	44
+code	ParseFunc.h	21
+code	ParseFunc.h	30
+code	ParseTree.h	18
+code	ParseTree.h	28
+code	ParseTree.h	59
+code	ParseTree.h	68
+customer	test.h	158
+d	test.out	1728
+d	test.out	1739
+d	test.out	1772
+d	test.out	1792
+d	test.out	1806
+d	test.out	1822
+d	test.out	1864
+d	test.out	1876
+dbf_c	test.cc	42
+dbf_li	test.cc	42
+dbf_o	test.cc	42
+dbf_p	test.cc	42
+dbf_ps	test.cc	42
+dbf_s	test.cc	42
+dbfile_dir	test.h	20
+dogged	partsupp.bin	46
+even	partsupp.bin	149
+even	partsupp.bin	228
+express	partsupp.bin	46
+f	Pipe.o	34
+f	RelOp.o	83
+fType	DBFile.h	14
+final	Parser.y	15
+final	partsupp.bin	3
+final	partsupp.bin	45
+final	partsupp.bin	137
+finalfunc	ParserFunc.y	15
+flex_int16_t	lex.yy.c	45
+flex_int16_t	lex.yy.c	51
+flex_int16_t	lex.yyfunc.c	64
+flex_int16_t	lex.yyfunc.c	70
+flex_int32_t	lex.yy.c	47
+flex_int32_t	lex.yy.c	52
+flex_int32_t	lex.yyfunc.c	66
+flex_int32_t	lex.yyfunc.c	71
+flex_int8_t	lex.yy.c	43
+flex_int8_t	lex.yy.c	50
+flex_int8_t	lex.yyfunc.c	62
+flex_int8_t	lex.yyfunc.c	69
+flex_uint16_t	lex.yy.c	46
+flex_uint16_t	lex.yy.c	54
+flex_uint16_t	lex.yyfunc.c	65
+flex_uint16_t	lex.yyfunc.c	73
+flex_uint32_t	lex.yy.c	48
+flex_uint32_t	lex.yy.c	55
+flex_uint32_t	lex.yyfunc.c	67
+flex_uint32_t	lex.yyfunc.c	74
+flex_uint8_t	lex.yy.c	44
+flex_uint8_t	lex.yy.c	53
+flex_uint8_t	lex.yyfunc.c	63
+flex_uint8_t	lex.yyfunc.c	72
+func_c	test.cc	46
+func_li	test.cc	46
+func_o	test.cc	46
+func_p	test.cc	46
+func_ps	test.cc	46
+func_s	test.cc	46
+get_cnf	test.h	/^void get_cnf (char *input, Schema *left, CNF &cnf_/
+get_cnf	test.h	/^void get_cnf (char *input, Schema *left, Schema *r/
+get_cnf	test.h	/^void get_cnf (char *input, Schema *left, Function /
+heap	DBFile.h	14
+inFile	RelOp.h	17
+inPipe	RelOp.h	10
+init_SF_c	test.cc	/^void init_SF_c (char *pred_str, int numpgs) {$/
+init_SF_li	test.cc	/^void init_SF_li (char *pred_str, int numpgs) {$/
+init_SF_o	test.cc	/^void init_SF_o (char *pred_str, int numpgs) {$/
+init_SF_p	test.cc	/^void init_SF_p (char *pred_str, int numpgs) {$/
+init_SF_ps	test.cc	/^void init_SF_ps (char *pred_str, int numpgs) {$/
+init_SF_s	test.cc	/^void init_SF_s (char *pred_str, int numpgs) {$/
+ironic	partsupp.bin	4
+ironic	partsupp.bin	137
+ironic	partsupp.bin	137
+ironic	partsupp.bin	139
+ironic	partsupp.bin	141
+jò	part.bin	160
+left	ParseTree.h	31
+left	ParseTree.h	38
+left	ParseTree.h	48
+leftOperand	ParseFunc.h	34
+leftOperand	ParseTree.h	72
+leftOperator	ParseFunc.h	33
+leftOperator	ParseTree.h	71
+lex.yy.o	Makefile	/^lex.yy.o: Lexer.l$/
+lex.yyfunc.o	Makefile	/^lex.yyfunc.o: LexerFunc.l$/
+li	test.h	163
+liAtts	test.cc	50
+lineitem	test.h	161
+litInput	Function.h	17
+lit_c	test.cc	45
+lit_li	test.cc	45
+lit_o	test.cc	45
+lit_p	test.cc	45
+lit_ps	test.cc	45
+lit_s	test.cc	45
+literal	RelOp.h	13
+literal	RelOp.h	20
+myAndList	Parser.y	24
+myComparison	Parser.y	22
+myOp	Function.h	15
+myOperand	ParserFunc.y	21
+myOperand	Parser.y	21
+myOperator	ParserFunc.y	22
+myOrList	Parser.y	23
+myType	Schema.h	19
+n	test.h	163
+nAtts	test.cc	54
+name	Schema.h	13
+name	Schema.h	18
+nation	test.h	157
+o	test.h	163
+oAtts	test.cc	51
+operator &=	TwoWayList.cc	/^TwoWayList <Type> :: operator &= (TwoWayList & Lis/
+operator<<	Comparison.cc	/^ostream& operator<<(std::ostream& os, const OrderM/
+operator>>	Comparison.cc	/^istream& operator>>(std::istream& is, OrderMaker& /
+order	test.h	37
+orders	test.h	159
+outPipe	RelOp.h	11
+outPipe	RelOp.h	18
+p	bq.bin	3
+p	customer.bin	86
+p	customer.bin	124
+p	customer.bin	175
+p	customer.bin	226
+p	customer.bin	264
+p	customer.bin	316
+p	customer.bin	360
+p	lineitem.bin	3
+p	orders.bin	57
+p	orders.bin	207
+p	orders.bin	628
+p	orders.bin	1038
+p	orders.bin	2620
+p	orders.bin	2648
+p	orders.bin	2703
+p	orders.bin	2715
+p	orders.bin	2769
+p	part.bin	3
+p	partsupp.bin	3
+p	partsupp.bin	5
+p	partsupp.bin	31
+p	partsupp.bin	40
+p	partsupp.bin	47
+p	partsupp.bin	126
+p	partsupp.bin	152
+p	partsupp.bin	230
+p	partsupp.bin	233
+p	supplier.bin	6
+p	test.h	163
+pAtts	test.cc	48
+part	test.h	156
+partsupp	test.h	155
+pending	partsupp.bin	2
+pipe	test.h	36
+pipesz	test.cc	38
+print	test.h	38
+ps	test.h	163
+psAtts	test.cc	49
+q	ComparisonEngine.o	26
+q	HeapFile.o	15
+q	Record.o	19
+q1	test.cc	/^void q1 () {$/
+q2	test.cc	/^void q2 () {$/
+q3	test.cc	/^void q3 () {$/
+q4	test.cc	/^void q4 () {$/
+q5	test.cc	/^void q5 () {$/
+q6	test.cc	/^void q6 () {$/
+q7	test.cc	/^void q7 () { $/
+q8	test.cc	/^void q8 () { $/
+r	test.h	163
+rAtts	test.cc	55
+readRecordsFromPipe	BigQ.cc	/^void * readRecordsFromPipe(void *arg)$/
+recInput	Function.h	16
+recordCompare	BigQ.h	20
+recordCompare::operator()	BigQ.h	/^    bool operator() (const Record * left,const Rec/
+recordCompare::recordCompare	BigQ.h	/^    recordCompare(OrderMaker *sortorder)$/
+recordCompare::sortedOrder	BigQ.h	22
+recordComparePQ	BigQ.h	48
+recordComparePQ::operator()	BigQ.h	/^    bool operator() (const pair<Record *, int> pai/
+recordComparePQ::recordComparePQ	BigQ.h	/^    recordComparePQ(OrderMaker *sortedorder)$/
+recordComparePQ::sortedOrder	BigQ.h	51
+region	test.h	160
+regular	partsupp.bin	4
+regular	partsupp.bin	157
+regular	partsupp.bin	229
+rel	test.h	152
+relation	test.h	42
+relation::get_cnf	test.h	/^	void get_cnf (char *input, CNF &cnf_pred, Record /
+relation::get_cnf	test.h	/^	void get_cnf (char *input, Function &fn_pred) {$/
+relation::get_cnf	test.h	/^	void get_cnf (CNF &cnf_pred, Record &literal) {$/
+relation::get_file_cnf	test.h	/^	void get_file_cnf (const char *fpath, CNF &cnf_pr/
+relation::get_sort_order	test.h	/^	void get_sort_order (OrderMaker &sortorder) {$/
+relation::info	test.h	/^	void info () {$/
+relation::name	test.h	/^	char* name () { return rname; }$/
+relation::path	test.h	/^	char* path () { return rpath; }$/
+relation::prefix	test.h	46
+relation::relation	test.h	/^	relation (char *_name, Schema *_schema, char *_pr/
+relation::rname	test.h	45
+relation::rpath	test.h	47
+relation::rschema	test.h	48
+relation::schema	test.h	/^	Schema* schema () { return rschema;}$/
+requests	partsupp.bin	2
+right	ParseFunc.h	35
+right	ParseTree.h	32
+right	ParseTree.h	73
+rightAnd	ParseTree.h	52
+rightOr	ParseTree.h	42
+s	test.h	163
+sAtts	test.cc	52
+selOp	RelOp.h	12
+selOp	RelOp.h	19
+settings	test.h	17
+setup	test.h	/^void setup () {$/
+short	y.tab.c	165
+short	yyfunc.tab.c	166
+silent	partsupp.bin	229
+sortOrder	BigQ.cc	18
+sorted	DBFile.h	14
+std	BigQ.h	15
+std	Comparison.h	11
+std	DBFile.h	11
+std	SortedFile.h	11
+std	test.h	13
+sum	README	/^3. select sum (s_acctbal + (s_acctbal * .05)) from/
+supplier	test.h	154
+tag	Makefile	/^tag = -i$/
+tag	Makefile	/^tag = -n$/
+test.o	Makefile	/^test.o: test.cc$/
+test.out	Makefile	/^test.out: Record.o Comparison.o ComparisonEngine.o/
+testutil	test.h	40
+tpch_dir	test.h	20
+tree	DBFile.h	14
+type	Schema.h	14
+unput	lex.yy.c	/^#define unput(c) yyunput( c, (yytext_ptr)  )$/
+unput	lex.yyfunc.c	/^#define unput(c) yyunput( c, (yytext_ptr)  )$/
+unusual	partsupp.bin	157
+v@	partsupp.bin	125
+v@a	partsupp.bin	3
+value	ParseFunc.h	24
+value	ParseTree.h	21
+value	ParseTree.h	62
+whichOne	ParserFunc.y	24
+write	test.h	39
+y.tab.o	Makefile	/^y.tab.o: Parser.y$/
+yy_accept	lex.yy.c	381
+yy_accept	lex.yyfunc.c	399
+yy_at_bol	lex.yy.c	231
+yy_at_bol	lex.yyfunc.c	250
+yy_base	lex.yy.c	426
+yy_base	lex.yyfunc.c	443
+yy_bs_column	lex.yy.c	234
+yy_bs_column	lex.yyfunc.c	253
+yy_bs_lineno	lex.yy.c	233
+yy_bs_lineno	lex.yyfunc.c	252
+yy_buf_pos	lex.yy.c	202
+yy_buf_pos	lex.yyfunc.c	221
+yy_buf_size	lex.yy.c	207
+yy_buf_size	lex.yyfunc.c	226
+yy_buffer_stack	lex.yy.c	263
+yy_buffer_stack	lex.yyfunc.c	282
+yy_buffer_stack_max	lex.yy.c	262
+yy_buffer_stack_max	lex.yyfunc.c	281
+yy_buffer_stack_top	lex.yy.c	261
+yy_buffer_stack_top	lex.yyfunc.c	280
+yy_buffer_state	lex.yy.c	197
+yy_buffer_state	lex.yyfunc.c	216
+yy_buffer_status	lex.yy.c	241
+yy_buffer_status	lex.yyfunc.c	260
+yy_c_buf_p	lex.yy.c	286
+yy_c_buf_p	lex.yyfunc.c	305
+yy_ch_buf	lex.yy.c	201
+yy_ch_buf	lex.yyfunc.c	220
+yy_chk	lex.yy.c	450
+yy_chk	lex.yyfunc.c	463
+yy_create_buffer	lex.yy.c	/^    YY_BUFFER_STATE yy_create_buffer  (FILE * file/
+yy_create_buffer	lex.yyfunc.c	8
+yy_def	lex.yy.c	433
+yy_def	lex.yyfunc.c	449
+yy_delete_buffer	lex.yy.c	/^    void yy_delete_buffer (YY_BUFFER_STATE  b )$/
+yy_delete_buffer	lex.yyfunc.c	9
+yy_did_buffer_switch_on_eof	lex.yy.c	293
+yy_did_buffer_switch_on_eof	lex.yyfunc.c	312
+yy_ec	lex.yy.c	388
+yy_ec	lex.yyfunc.c	405
+yy_fatal_error	lex.yy.c	/^static void yy_fatal_error (yyconst char* msg )$/
+yy_fatal_error	lex.yyfunc.c	/^static void yy_fatal_error (yyconst char* msg )$/
+yy_fill_buffer	lex.yy.c	239
+yy_fill_buffer	lex.yyfunc.c	258
+yy_flex_debug	lex.yy.c	464
+yy_flex_debug	lex.yyfunc.c	10
+yy_flex_strlen	lex.yy.c	/^static int yy_flex_strlen (yyconst char * s )$/
+yy_flex_strlen	lex.yyfunc.c	/^static int yy_flex_strlen (yyconst char * s )$/
+yy_flex_strncpy	lex.yy.c	/^static void yy_flex_strncpy (char* s1, yyconst cha/
+yy_flex_strncpy	lex.yyfunc.c	/^static void yy_flex_strncpy (char* s1, yyconst cha/
+yy_flush_buffer	lex.yy.c	/^    void yy_flush_buffer (YY_BUFFER_STATE  b )$/
+yy_flush_buffer	lex.yyfunc.c	12
+yy_get_next_buffer	lex.yy.c	/^static int yy_get_next_buffer (void)$/
+yy_get_next_buffer	lex.yyfunc.c	/^static int yy_get_next_buffer (void)$/
+yy_get_previous_state	lex.yy.c	/^    static yy_state_type yy_get_previous_state (vo/
+yy_get_previous_state	lex.yyfunc.c	/^    static yy_state_type yy_get_previous_state (vo/
+yy_hold_char	lex.yy.c	281
+yy_hold_char	lex.yyfunc.c	300
+yy_init	lex.yy.c	287
+yy_init	lex.yyfunc.c	306
+yy_init_buffer	lex.yy.c	/^    static void yy_init_buffer  (YY_BUFFER_STATE  /
+yy_init_buffer	lex.yyfunc.c	11
+yy_init_globals	lex.yy.c	/^static int yy_init_globals (void)$/
+yy_init_globals	lex.yyfunc.c	/^static int yy_init_globals (void)$/
+yy_input_file	lex.yy.c	199
+yy_input_file	lex.yyfunc.c	218
+yy_is_interactive	lex.yy.c	225
+yy_is_interactive	lex.yyfunc.c	244
+yy_is_our_buffer	lex.yy.c	218
+yy_is_our_buffer	lex.yyfunc.c	237
+yy_last_accepting_cpos	lex.yy.c	461
+yy_last_accepting_cpos	lex.yyfunc.c	472
+yy_last_accepting_state	lex.yy.c	460
+yy_last_accepting_state	lex.yyfunc.c	471
+yy_load_buffer_state	lex.yy.c	/^static void yy_load_buffer_state  (void)$/
+yy_load_buffer_state	lex.yyfunc.c	13
+yy_meta	lex.yy.c	420
+yy_meta	lex.yyfunc.c	437
+yy_more_flag	lex.yy.c	470
+yy_more_len	lex.yy.c	471
+yy_n_chars	lex.yy.c	212
+yy_n_chars	lex.yy.c	282
+yy_n_chars	lex.yyfunc.c	231
+yy_n_chars	lex.yyfunc.c	301
+yy_new_buffer	lex.yy.c	317
+yy_new_buffer	lex.yyfunc.c	336
+yy_nxt	lex.yy.c	379
+yy_nxt	lex.yy.c	440
+yy_nxt	lex.yyfunc.c	397
+yy_nxt	lex.yyfunc.c	455
+yy_reduce_print	y.tab.c	/^yy_reduce_print (YYSTYPE *yyvsp, int yyrule)$/
+yy_reduce_print	yyfunc.tab.c	/^yy_reduce_print (YYSTYPE *yyvsp, int yyrule)$/
+yy_scan_buffer	lex.yy.c	/^YY_BUFFER_STATE yy_scan_buffer  (char * base, yy_s/
+yy_scan_bytes	lex.yy.c	/^YY_BUFFER_STATE yy_scan_bytes  (yyconst char * yyb/
+yy_scan_string	lex.yy.c	/^YY_BUFFER_STATE yy_scan_string (yyconst char * yys/
+yy_set_bol	lex.yy.c	/^#define yy_set_bol(at_bol) \\$/
+yy_set_bol	lex.yyfunc.c	/^#define yy_set_bol(at_bol) \\$/
+yy_set_interactive	lex.yy.c	/^#define yy_set_interactive(is_interactive) \\$/
+yy_set_interactive	lex.yyfunc.c	/^#define yy_set_interactive(is_interactive) \\$/
+yy_size_t	lex.yy.c	192
+yy_size_t	lex.yyfunc.c	211
+yy_stack_print	y.tab.c	/^yy_stack_print (yytype_int16 *yybottom, yytype_int/
+yy_stack_print	yyfunc.tab.c	/^yy_stack_print (yytype_int16 *yybottom, yytype_int/
+yy_start	lex.yy.c	288
+yy_start	lex.yyfunc.c	307
+yy_state_type	lex.yy.c	347
+yy_state_type	lex.yyfunc.c	366
+yy_switch_to_buffer	lex.yy.c	/^    void yy_switch_to_buffer  (YY_BUFFER_STATE  ne/
+yy_switch_to_buffer	lex.yyfunc.c	14
+yy_symbol_print	y.tab.c	/^yy_symbol_print (FILE *yyoutput, int yytype, YYSTY/
+yy_symbol_print	yyfunc.tab.c	/^yy_symbol_print (FILE *yyoutput, int yytype, YYSTY/
+yy_symbol_value_print	y.tab.c	/^yy_symbol_value_print (FILE *yyoutput, int yytype,/
+yy_symbol_value_print	yyfunc.tab.c	/^yy_symbol_value_print (FILE *yyoutput, int yytype,/
+yy_trans_info	lex.yy.c	376
+yy_trans_info	lex.yyfunc.c	394
+yy_try_NUL_trans	lex.yy.c	/^    static yy_state_type yy_try_NUL_trans  (yy_sta/
+yy_try_NUL_trans	lex.yyfunc.c	/^    static yy_state_type yy_try_NUL_trans  (yy_sta/
+yy_verify	lex.yy.c	378
+yy_verify	lex.yyfunc.c	396
+yyalloc	lex.yy.c	/^void *yyalloc (yy_size_t  size )$/
+yyalloc	lex.yyfunc.c	23
+yyalloc	y.tab.c	323
+yyalloc	yyfunc.tab.c	324
+yychar	y.tab.c	1112
+yychar	yyfunc.tab.c	69
+yychar	yyfunc.tab.c	1109
+yycheck	y.tab.c	540
+yycheck	yyfunc.tab.c	538
+yyclearin	y.tab.c	556
+yyclearin	yyfunc.tab.c	553
+yyconst	lex.yy.c	106
+yyconst	lex.yy.c	108
+yyconst	lex.yyfunc.c	125
+yyconst	lex.yyfunc.c	127
+yydebug	y.tab.c	799
+yydebug	yyfunc.tab.c	70
+yydebug	yyfunc.tab.c	796
+yydefact	y.tab.c	495
+yydefact	yyfunc.tab.c	495
+yydefgoto	y.tab.c	503
+yydefgoto	yyfunc.tab.c	502
+yydestruct	y.tab.c	/^yydestruct (const char *yymsg, int yytype, YYSTYPE/
+yydestruct	yyfunc.tab.c	/^yydestruct (const char *yymsg, int yytype, YYSTYPE/
+yyensure_buffer_stack	lex.yy.c	/^static void yyensure_buffer_stack (void)$/
+yyerrok	y.tab.c	555
+yyerrok	yyfunc.tab.c	552
+yyerror	yyfunc.tab.c	67
+yyfree	lex.yy.c	/^void yyfree (void * ptr )$/
+yyfree	lex.yyfunc.c	25
+yyfunc.tab.o	Makefile	/^yyfunc.tab.o: ParserFunc.y$/
+yyfunc_create_buffer	lex.yyfunc.c	/^    YY_BUFFER_STATE yyfunc_create_buffer  (FILE * /
+yyfunc_delete_buffer	lex.yyfunc.c	/^    void yyfunc_delete_buffer (YY_BUFFER_STATE  b /
+yyfunc_flex_debug	lex.yyfunc.c	475
+yyfunc_flush_buffer	lex.yyfunc.c	/^    void yyfunc_flush_buffer (YY_BUFFER_STATE  b )/
+yyfunc_init_buffer	lex.yyfunc.c	/^    static void yyfunc_init_buffer  (YY_BUFFER_STA/
+yyfunc_load_buffer_state	lex.yyfunc.c	/^static void yyfunc_load_buffer_state  (void)$/
+yyfunc_scan_buffer	lex.yyfunc.c	/^YY_BUFFER_STATE yyfunc_scan_buffer  (char * base, /
+yyfunc_scan_bytes	lex.yyfunc.c	/^YY_BUFFER_STATE yyfunc_scan_bytes  (yyconst char */
+yyfunc_scan_string	lex.yyfunc.c	/^YY_BUFFER_STATE yyfunc_scan_string (yyconst char */
+yyfunc_switch_to_buffer	lex.yyfunc.c	/^    void yyfunc_switch_to_buffer  (YY_BUFFER_STATE/
+yyfuncalloc	lex.yyfunc.c	/^void *yyfuncalloc (yy_size_t  size )$/
+yyfuncensure_buffer_stack	lex.yyfunc.c	/^static void yyfuncensure_buffer_stack (void)$/
+yyfuncfree	lex.yyfunc.c	/^void yyfuncfree (void * ptr )$/
+yyfuncget_debug	lex.yyfunc.c	/^int yyfuncget_debug  (void)$/
+yyfuncget_in	lex.yyfunc.c	/^FILE *yyfuncget_in  (void)$/
+yyfuncget_leng	lex.yyfunc.c	/^int yyfuncget_leng  (void)$/
+yyfuncget_lineno	lex.yyfunc.c	/^int yyfuncget_lineno  (void)$/
+yyfuncget_out	lex.yyfunc.c	/^FILE *yyfuncget_out  (void)$/
+yyfuncget_text	lex.yyfunc.c	/^char *yyfuncget_text  (void)$/
+yyfuncin	lex.yyfunc.c	364
+yyfuncleng	lex.yyfunc.c	302
+yyfunclex_destroy	lex.yyfunc.c	/^int yyfunclex_destroy  (void)$/
+yyfunclineno	lex.yyfunc.c	370
+yyfuncpop_buffer_state	lex.yyfunc.c	/^void yyfuncpop_buffer_state (void)$/
+yyfuncpush_buffer_state	lex.yyfunc.c	/^void yyfuncpush_buffer_state (YY_BUFFER_STATE new_/
+yyfuncrealloc	lex.yyfunc.c	/^void *yyfuncrealloc  (void * ptr, yy_size_t  size /
+yyfuncrestart	lex.yyfunc.c	/^    void yyfuncrestart  (FILE * input_file )$/
+yyfuncset_debug	lex.yyfunc.c	/^void yyfuncset_debug (int  bdebug )$/
+yyfuncset_in	lex.yyfunc.c	/^void yyfuncset_in (FILE *  in_str )$/
+yyfuncset_lineno	lex.yyfunc.c	/^void yyfuncset_lineno (int  line_number )$/
+yyfuncset_out	lex.yyfunc.c	/^void yyfuncset_out (FILE *  out_str )$/
+yyfunctext	lex.yyfunc.c	484
+yyget_debug	lex.yy.c	/^int yyget_debug  (void)$/
+yyget_in	lex.yy.c	/^FILE *yyget_in  (void)$/
+yyget_leng	lex.yy.c	/^int yyget_leng  (void)$/
+yyget_lineno	lex.yy.c	/^int yyget_lineno  (void)$/
+yyget_out	lex.yy.c	/^FILE *yyget_out  (void)$/
+yyget_text	lex.yy.c	/^char *yyget_text  (void)$/
+yyin	lex.yy.c	345
+yyin	lex.yyfunc.c	15
+yyinput	lex.yy.c	/^    static int yyinput (void)$/
+yyinput	lex.yyfunc.c	/^    static int yyinput (void)$/
+yyleng	lex.yy.c	283
+yyleng	lex.yyfunc.c	16
+yyless	lex.yy.c	/^#define yyless(n) \\$/
+yyless	lex.yy.c	1683
+yyless	lex.yy.c	/^#define yyless(n) \\$/
+yyless	lex.yyfunc.c	/^#define yyless(n) \\$/
+yyless	lex.yyfunc.c	1669
+yyless	lex.yyfunc.c	/^#define yyless(n) \\$/
+yylex	lex.yyfunc.c	17
+yylex	yyfunc.tab.c	66
+yylex_destroy	lex.yy.c	/^int yylex_destroy  (void)$/
+yylineno	lex.yy.c	351
+yylineno	lex.yyfunc.c	18
+yylval	y.tab.c	1115
+yylval	yyfunc.tab.c	68
+yylval	yyfunc.tab.c	1112
+yymore	lex.yy.c	/^#define yymore() ((yy_more_flag) = 1)$/
+yymore	lex.yyfunc.c	/^#define yymore() yymore_used_but_not_detected$/
+yynerrs	y.tab.c	1118
+yynerrs	yyfunc.tab.c	71
+yynerrs	yyfunc.tab.c	1115
+yyout	lex.yyfunc.c	19
+yypact	y.tab.c	511
+yypact	yyfunc.tab.c	510
+yypact_value_is_default	y.tab.c	/^#define yypact_value_is_default(yystate) \\$/
+yypact_value_is_default	yyfunc.tab.c	/^#define yypact_value_is_default(yystate) \\$/
+yyparse	y.tab.c	/^yyparse (void *YYPARSE_PARAM)$/
+yyparse	yyfunc.tab.c	65
+yyparse	yyfunc.tab.c	/^yyparse (void *YYPARSE_PARAM)$/
+yypgoto	y.tab.c	519
+yypgoto	yyfunc.tab.c	517
+yypop_buffer_state	lex.yy.c	/^void yypop_buffer_state (void)$/
+yyprhs	y.tab.c	434
+yyprhs	yyfunc.tab.c	435
+yypush_buffer_state	lex.yy.c	/^void yypush_buffer_state (YY_BUFFER_STATE new_buff/
+yyr1	y.tab.c	479
+yyr1	yyfunc.tab.c	479
+yyr2	y.tab.c	486
+yyr2	yyfunc.tab.c	486
+yyrealloc	lex.yy.c	/^void *yyrealloc  (void * ptr, yy_size_t  size )$/
+yyrealloc	lex.yyfunc.c	24
+yyrestart	lex.yy.c	/^    void yyrestart  (FILE * input_file )$/
+yyrestart	lex.yyfunc.c	20
+yyrhs	y.tab.c	441
+yyrhs	yyfunc.tab.c	442
+yyrline	y.tab.c	450
+yyrline	yyfunc.tab.c	451
+yyset_debug	lex.yy.c	/^void yyset_debug (int  bdebug )$/
+yyset_in	lex.yy.c	/^void yyset_in (FILE *  in_str )$/
+yyset_lineno	lex.yy.c	/^void yyset_lineno (int  line_number )$/
+yyset_out	lex.yy.c	/^void yyset_out (FILE *  out_str )$/
+yyss_alloc	y.tab.c	325
+yyss_alloc	yyfunc.tab.c	326
+yystos	y.tab.c	548
+yystos	yyfunc.tab.c	546
+yystpcpy	y.tab.c	852
+yystpcpy	y.tab.c	/^yystpcpy (char *yydest, const char *yysrc)$/
+yystpcpy	yyfunc.tab.c	849
+yystpcpy	yyfunc.tab.c	/^yystpcpy (char *yydest, const char *yysrc)$/
+yystrlen	y.tab.c	829
+yystrlen	y.tab.c	/^yystrlen (const char *yystr)$/
+yystrlen	yyfunc.tab.c	826
+yystrlen	yyfunc.tab.c	/^yystrlen (const char *yystr)$/
+yystype	y.tab.c	153
+yystype	y.tab.h	78
+yystype	yyfunc.tab.c	154
+yystype	yyfunc.tab.h	71
+yysyntax_error	y.tab.c	/^yysyntax_error (YYSIZE_T *yymsg_alloc, char **yyms/
+yysyntax_error	yyfunc.tab.c	/^yysyntax_error (YYSIZE_T *yymsg_alloc, char **yyms/
+yytable	y.tab.c	528
+yytable	yyfunc.tab.c	526
+yytable_value_is_error	y.tab.c	/^#define yytable_value_is_error(yytable_value) \\$/
+yytable_value_is_error	yyfunc.tab.c	/^#define yytable_value_is_error(yytable_value) \\$/
+yyterminate	lex.yy.c	/^#define yyterminate() return YY_NULL$/
+yyterminate	lex.yyfunc.c	/^#define yyterminate() return YY_NULL$/
+yytext	lex.yy.c	475
+yytext	lex.yyfunc.c	21
+yytext_ptr	lex.yy.c	354
+yytext_ptr	lex.yyfunc.c	373
+yytname	y.tab.c	460
+yytname	yyfunc.tab.c	461
+yytnamerr	y.tab.c	/^yytnamerr (char *yyres, const char *yystr)$/
+yytnamerr	yyfunc.tab.c	/^yytnamerr (char *yyres, const char *yystr)$/
+yytokentype	y.tab.c	114
+yytokentype	y.tab.h	39
+yytokentype	yyfunc.tab.c	122
+yytokentype	yyfunc.tab.h	39
+yytoknum	y.tab.c	471
+yytoknum	yyfunc.tab.c	471
+yytranslate	y.tab.c	400
+yytranslate	yyfunc.tab.c	401
+yytype_int16	y.tab.c	190
+yytype_int16	y.tab.c	192
+yytype_int16	yyfunc.tab.c	191
+yytype_int16	yyfunc.tab.c	193
+yytype_int8	y.tab.c	175
+yytype_int8	y.tab.c	178
+yytype_int8	y.tab.c	180
+yytype_int8	yyfunc.tab.c	176
+yytype_int8	yyfunc.tab.c	179
+yytype_int8	yyfunc.tab.c	181
+yytype_uint16	y.tab.c	184
+yytype_uint16	y.tab.c	186
+yytype_uint16	yyfunc.tab.c	185
+yytype_uint16	yyfunc.tab.c	187
+yytype_uint8	y.tab.c	169
+yytype_uint8	y.tab.c	171
+yytype_uint8	yyfunc.tab.c	170
+yytype_uint8	yyfunc.tab.c	172
+yyunput	lex.yy.c	/^    static void yyunput (int c, register char * yy/
+yyunput	lex.yyfunc.c	/^    static void yyunput (int c, register char * yy/
+yyvs_alloc	y.tab.c	326
+yyvs_alloc	yyfunc.tab.c	327
+yywrap	lex.yyfunc.c	22
+~File	File.cc	/^File :: ~File () {$/
+~Page	File.cc	/^Page :: ~Page () {$/
+~Pipe	Pipe.cc	/^Pipe :: ~Pipe () {$/
+~Record	Record.cc	/^Record :: ~Record () {$/
+~Schema	Schema.cc	/^Schema :: ~Schema () {$/
+~TwoWayList	TwoWayList.cc	/^TwoWayList <Type> :: ~TwoWayList ()$/
