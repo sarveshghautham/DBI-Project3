@@ -58,6 +58,7 @@ class SelectFile : public RelationalOp {
 
 	public:
 
+    SelectFromFileParams *sfParams;
     pthread_t SelectFileThread;
 	void Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal);
 	void WaitUntilDone ();
@@ -68,7 +69,7 @@ class SelectFile : public RelationalOp {
 class SelectPipe : public RelationalOp {
     friend void * SelectFromPipe(void *);
 	public:
-
+    SelectFromPipeParams *spParams;
     pthread_t SelectPipeThread;
 	void Run (Pipe &inPipe, Pipe &outPipe, CNF &selOp, Record &literal);
 	void WaitUntilDone ();

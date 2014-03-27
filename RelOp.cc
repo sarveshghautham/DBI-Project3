@@ -3,10 +3,17 @@
 void SelectPipe::Run (Pipe &inPipe, Pipe &outPipe, CNF &selOp, Record &literal) {
    
     /* Box parameters in a struct and call the thread routine */ 
-    SelectFromPipeParams spParams = {&inPipe, &outPipe, &selOp, &literal};
+    //SelectFromPipeParams spParams = {&inPipe, &outPipe, &selOp, &literal};
+    
+    SelectFromPipeParams *spParams = new SelectFromPipeParams;
+    spParams->inPipe = &inPipe;
+    spParams->outPipe = &outPipe;
+    spParams->selOp = &selOp;
+    spParams->literal = &literal;
+    
     /* Ctrate thread */
     SelectPipe sp;
-    pthread_create(&(sp.SelectPipeThread), NULL, SelectFromPipe, (void *) &spParams);
+    pthread_create(&(sp.SelectPipeThread), NULL, SelectFromPipe, (void *)spParams);
 }
 
 void * SelectFromPipe (void *spParams) {
@@ -26,9 +33,8 @@ void * SelectFromPipe (void *spParams) {
 
 void SelectPipe::WaitUntilDone() {
 
-    SelectPipe sp;
-    pthread_join(sp.SelectPipeThread, NULL);
-
+    pthread_join(SelectPipeThread, NULL);
+    delete spParams;
 }
 
 void SelectFile::Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal) {
@@ -38,7 +44,7 @@ void SelectFile::Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal
     /* Box parameters in a struct and call the thread routine */ 
 
     //SelectFromFileParams sfParams = {&inFile, &outPipe, &selOp, &literal};
-    SelectFromFileParams *sfParams = new SelectFromFileParams;
+    sfParams = new SelectFromFileParams;
     sfParams->inFile = &inFile;
     sfParams->outPipe = &outPipe;
     sfParams->selOp = &selOp;
@@ -52,15 +58,15 @@ void SelectFile::Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal
 void * SelectFromFile (void *sfParams) {
   
     SelectFromFileParams *sf = (SelectFromFileParams *)sfParams;
+    DBFile *inFile = sf->inFile;
    
-    if (sf->inFile == NULL || sf->outPipe == NULL || sf->selOp == NULL || sf->literal == NULL) {
+    if (inFile == NULL || sf->outPipe == NULL || sf->selOp == NULL || sf->literal == NULL) {
         cout << "something's wrong" <<endl;
         exit(-1);
     }
     
     Record temp;
     ComparisonEngine cmp;
-    DBFile *inFile = sf->inFile;
 
     inFile->MoveFirst();
 
@@ -73,8 +79,9 @@ void * SelectFromFile (void *sfParams) {
 
 void SelectFile::WaitUntilDone() {
 
-    pthread_join(this->SelectFileThread, NULL);
-
+    pthread_join(SelectFileThread, NULL);
+    //Throws seg fault. commenting for now. makes inFile NULL.
+ //   delete sfParams; 
 }
 
 void SelectFile::Use_n_Pages (int runlen) {
