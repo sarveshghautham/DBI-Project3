@@ -94,7 +94,7 @@ void init_SF_c (char *pred_str, int numpgs) {
 // expected output: 31 records
 void q1 () {
 
-	char *pred_ps = "(ps_supplycost < 1.03)";
+	char *pred_ps = "(ps_supplycost < 500.00)";
 	init_SF_ps (pred_ps, 100);
 
 	SF_ps.Run (dbf_ps, _ps, cnf_ps, lit_ps);
@@ -218,7 +218,7 @@ void q4 () {
 // expected output: 9996 rows
 void q5 () {
 
-	char *pred_ps = "(ps_supplycost < 100.11)";
+	char *pred_ps = "(ps_supplycost < 500.00)";
 	init_SF_ps (pred_ps, 100);
 
 	Project P_ps;
@@ -241,12 +241,18 @@ void q5 () {
 	SF_ps.Run (dbf_ps, _ps, cnf_ps, lit_ps);
 	P_ps.Run (_ps, __ps, keepMe, numAttsIn, numAttsOut);
 	D.Run (__ps, ___ps,__ps_sch);
+    cout<<"1"<<endl;
 	W.Run (___ps, writefile, __ps_sch);
+    cout<<"2"<<endl;
 
 	SF_ps.WaitUntilDone ();
+    cout<<"3"<<endl;
 	P_ps.WaitUntilDone ();
+    cout<<"4"<<endl;
 	D.WaitUntilDone ();
+    cout<<"5"<<endl;
 	W.WaitUntilDone ();
+    cout<<"6"<<endl;
 
 	cout << " query5 finished..output written to file " << fwpath << "\n";
 }

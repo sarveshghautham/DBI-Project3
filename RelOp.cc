@@ -3,10 +3,15 @@
 void SelectPipe::Run (Pipe &inPipe, Pipe &outPipe, CNF &selOp, Record &literal) {
    
     /* Box parameters in a struct and call the thread routine */ 
-    SelectFromPipeParams spParams = {&inPipe, &outPipe, &selOp, &literal};
+//    SelectFromPipeParams spParams = {&inPipe, &outPipe, &selOp, &literal};
+    spParams = new SelectFromPipeParams;
+    spParams->inPipe = &inPipe;
+    spParams->outPipe = &outPipe;
+    spParams->selOp = &selOp;
+    spParams->literal = &literal;
+       
     /* Create thread */
-    SelectPipe sp;
-    pthread_create(&(sp.SelectPipeThread), NULL, SelectFromPipe, (void *) &spParams);
+    pthread_create(&SelectPipeThread, NULL, SelectFromPipe, (void *) &spParams);
 }
 
 void * SelectFromPipe (void *spParams) {
@@ -26,9 +31,8 @@ void * SelectFromPipe (void *spParams) {
 
 void SelectPipe::WaitUntilDone() {
 
-    SelectPipe sp;
-    pthread_join(sp.SelectPipeThread, NULL);
-
+    pthread_join(SelectPipeThread, NULL);
+    delete spParams;
 }
 
 void SelectFile::Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal) {
@@ -38,15 +42,14 @@ void SelectFile::Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal
     /* Box parameters in a struct and call the thread routine */ 
 
     //SelectFromFileParams sfParams = {&inFile, &outPipe, &selOp, &literal};
-    SelectFromFileParams *sfParams = new SelectFromFileParams;
+    sfParams = new SelectFromFileParams;
     sfParams->inFile = &inFile;
     sfParams->outPipe = &outPipe;
     sfParams->selOp = &selOp;
     sfParams->literal = &literal;
 
-    /* Ctrate thread */
-    SelectFile sf;
-    pthread_create(&(sf.SelectFileThread), NULL, SelectFromFile, (void *)sfParams);
+    /* Create thread */
+    pthread_create(&SelectFileThread, NULL, SelectFromFile, (void *)sfParams);
 }
 
 void * SelectFromFile (void *sfParams) {
@@ -73,8 +76,9 @@ void * SelectFromFile (void *sfParams) {
 
 void SelectFile::WaitUntilDone() {
 
-    pthread_join(this->SelectFileThread, NULL);
-
+    pthread_join(SelectFileThread, NULL);
+    //cout <<""<<endl;
+    //delete sfParams;
 }
 
 void SelectFile::Use_n_Pages (int runlen) {
@@ -82,15 +86,14 @@ void SelectFile::Use_n_Pages (int runlen) {
 
 void Project::Run (Pipe &inPipe, Pipe &outPipe, int *keepMe, int numAttsInput, int numAttsOutput) {
 
-    ProjectParams *pParams = new ProjectParams;
+    pParams = new ProjectParams;
 	pParams->inPipe = &inPipe;
 	pParams->outPipe = &outPipe;
 	pParams->keepMe = keepMe;
 	pParams->numAttsInput = numAttsInput;
 	pParams->numAttsOutput = numAttsOutput;
 	
-    Project p;
-    pthread_create(&(p.ProjectThread), NULL, ProjectRoutine, (void *) pParams);
+    pthread_create(&ProjectThread, NULL, ProjectRoutine, (void *) pParams);
 
 }
 
@@ -114,15 +117,67 @@ void * ProjectRoutine (void *pParams) {
 }
 
 void Project::WaitUntilDone() {
-    pthread_join (this->ProjectThread, NULL);
+    pthread_join (ProjectThread, NULL);
+    delete pParams;
+}
+
+void DuplicateRemoval::Run (Pipe &inPipe, Pipe &outPipe, Schema &mySchema ) {
+   
+    /* Box parameters in a struct and call the thread routine */ 
+//    SelectFromPipeParams spParams = {&inPipe, &outPipe, &selOp, &literal};
+    drParams = new DuplicateRemovalParams;
+    drParams->inPipe = &inPipe;
+    drParams->outPipe = &outPipe;
+    drParams->mySchema = &mySchema;   
+
+    /* Create thread */
+    pthread_create(&DuplicateRemovalThread, NULL, DuplicateRemovalRoutine, (void *) &drParams);
+}
+
+void * DuplicateRemovalRoutine (void *drParams) {
+    
+    DuplicateRemovalParams *dr = (DuplicateRemovalParams *)drParams;
+    Pipe tempOutPipe(100);
+    OrderMaker sortOrder (dr->mySchema);
+    
+    BigQ bq(*(dr->inPipe), tempOutPipe, sortOrder, 4); 
+    
+    Record temp1;
+    Record temp2;
+    ComparisonEngine cmp;
+    bool firstRec = true;
+
+    while (tempOutPipe.Remove (&temp1)) {
+        if (firstRec) {
+            (dr->outPipe)->Insert(&temp1);
+            firstRec = false;
+            temp2.Copy(&temp1);
+        }
+        else {
+            if (cmp.Compare (&temp1, &temp2, &sortOrder)) {
+                (dr->outPipe)->Insert(&temp1);
+                temp2.Copy(&temp1);
+            }
+        }
+    }
+
+    (dr->outPipe)->ShutDown();
+}
+
+void DuplicateRemoval::WaitUntilDone() {
+
+    pthread_join(DuplicateRemovalThread, NULL);
+    delete drParams;
 }
 
 void WriteOut::Run (Pipe &inPipe, FILE *outFile, Schema &mySchema) {
 
-    WriteOutParams woParams = {&inPipe, outFile, &mySchema};
+    woParams = new WriteOutParams;
+    woParams->inPipe = &inPipe;
+    woParams->outFile = outFile;
+    woParams->mySchema =  &mySchema;
 
-    WriteOut wo;
-    pthread_create (&(wo.WriteOutThread), NULL, WriteOutToFile, (void *) &woParams);
+    pthread_create (&WriteOutThread, NULL, WriteOutToFile, (void *) &woParams);
 }
 
 void * WriteOutToFile (void *woParams) {
@@ -131,23 +186,13 @@ void * WriteOutToFile (void *woParams) {
     Record temp;
 
     while ((wo->inPipe)->Remove(&temp)) {
-
-        temp.Print(wo->mySchema, wo->outFile);
+        temp.PrintToFile(wo->mySchema, wo->outFile);
     }
 }
 
 void WriteOut::WaitUntilDone() {
 
-    WriteOut wo;
-    pthread_join(wo.WriteOutThread, NULL);
+    pthread_join(WriteOutThread, NULL);
+    delete woParams;
 
 }
-
-
-
-
-
-
-
-
-

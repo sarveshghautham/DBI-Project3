@@ -2,6 +2,7 @@
 #define REL_OP_H
 
 #include "Pipe.h"
+#include "BigQ.h"
 #include "DBFile.h"
 #include "Record.h"
 #include "Function.h"
@@ -22,6 +23,12 @@ typedef struct {
 
 typedef struct {
     Pipe *inPipe;
+    Pipe *outPipe;
+    Schema *mySchema;
+}DuplicateRemovalParams;
+
+typedef struct {
+    Pipe *inPipe;
     FILE *outFile;
     Schema *mySchema;
 }WriteOutParams;
@@ -37,6 +44,7 @@ typedef struct {
 void * SelectFromPipe (void *);
 void * SelectFromFile (void *);
 void * ProjectRoutine (void *);
+void * DuplicateRemovalRoutine (void *);
 void * WriteOutToFile (void *);
 
 class RelationalOp {
@@ -79,6 +87,7 @@ class Project : public RelationalOp {
 
     friend void * ProjectRoutine (void *);
 	public:
+    ProjectParams *pParams;
     pthread_t ProjectThread; 
 	void Run (Pipe &inPipe, Pipe &outPipe, int *keepMe, int numAttsInput, int numAttsOutput);
 	void WaitUntilDone ();
@@ -91,9 +100,12 @@ class Join : public RelationalOp {
 	void Use_n_Pages (int n) { }
 };
 class DuplicateRemoval : public RelationalOp {
+    friend void * DuplicateRemovalRoutine (void *);
 	public:
-	void Run (Pipe &inPipe, Pipe &outPipe, Schema &mySchema) { }
-	void WaitUntilDone () { }
+    DuplicateRemovalParams *drParams;
+    pthread_t DuplicateRemovalThread;
+	void Run (Pipe &inPipe, Pipe &outPipe, Schema &mySchema);
+	void WaitUntilDone ();
 	void Use_n_Pages (int n) { }
 };
 class Sum : public RelationalOp {
@@ -112,6 +124,7 @@ class WriteOut : public RelationalOp {
 
     friend void * WriteOutToFile (void *);
 	public:
+    WriteOutParams *woParams;
     pthread_t WriteOutThread;
 
 	void Run (Pipe &inPipe, FILE *outFile, Schema &mySchema);

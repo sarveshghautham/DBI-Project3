@@ -468,7 +468,7 @@ void Record :: Print (Schema *mySchema) {
 	cout << "\n";
 }
 
-void Record :: Print (Schema *mySchema, FILE *outFile) {
+void Record :: PrintToFile (Schema *mySchema, FILE *outFile) {
 
 	int n = mySchema->GetNumAtts();
 	Attribute *atts = mySchema->GetAtts();
