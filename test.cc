@@ -111,7 +111,7 @@ void q1 () {
 // expected output: 22 records
 void q2 () {
 
-	char *pred_p = "(p_retailprice > 931.01) AND (p_retailprice < 931.3)";
+	char *pred_p = "(p_retailprice > 900.00) AND (p_retailprice < 927.00)";
 	init_SF_p (pred_p, 100);
 
 	Project P_p;
