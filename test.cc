@@ -240,6 +240,7 @@ void q3 (){
 }
 
 
+<<<<<<< HEAD
 void q4 (){
 
 	Statistics s;
@@ -298,6 +299,10 @@ void q4 (){
 	
 	s.Write(fileName);
 	
+=======
+	char *pred_ps = "(ps_supplycost < 500.00)";
+	init_SF_ps (pred_ps, 100);
+>>>>>>> 20da8dd0dad71eab0825773117f7a6e752492852
 
 
 
@@ -417,8 +422,13 @@ void q7(){
 // Note  OR conditions are not independent.
 void q8 (){
 
+<<<<<<< HEAD
 	Statistics s;
         char *relName[] = { "part",  "partsupp"};
+=======
+	char *pred_ps = "(ps_supplycost < 500.00)";
+	init_SF_ps (pred_ps, 100);
+>>>>>>> 20da8dd0dad71eab0825773117f7a6e752492852
 
 	s.Read(fileName);
 	
@@ -436,6 +446,7 @@ void q8 (){
 	yyparse();
 	
 		
+<<<<<<< HEAD
 	double result = s.Estimate(final, relName,2);
 
 	if(fabs(result-48000)>0.1)
@@ -445,6 +456,30 @@ void q8 (){
 	
 	s.Write(fileName);
 
+=======
+	WriteOut W;
+		// inpipe = ___ps
+		char *fwpath = "ps.w.tmp";
+		FILE *writefile = fopen (fwpath, "w");
+
+	SF_ps.Run (dbf_ps, _ps, cnf_ps, lit_ps);
+	P_ps.Run (_ps, __ps, keepMe, numAttsIn, numAttsOut);
+	D.Run (__ps, ___ps,__ps_sch);
+    cout<<"1"<<endl;
+	W.Run (___ps, writefile, __ps_sch);
+    cout<<"2"<<endl;
+
+	SF_ps.WaitUntilDone ();
+    cout<<"3"<<endl;
+	P_ps.WaitUntilDone ();
+    cout<<"4"<<endl;
+	D.WaitUntilDone ();
+    cout<<"5"<<endl;
+	W.WaitUntilDone ();
+    cout<<"6"<<endl;
+
+	cout << " query5 finished..output written to file " << fwpath << "\n";
+>>>>>>> 20da8dd0dad71eab0825773117f7a6e752492852
 }
 void q9(){
 
