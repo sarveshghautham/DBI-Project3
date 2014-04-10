@@ -11,6 +11,7 @@
 #include<cmath>
 #include<algorithm>
 #include<queue>
+#include<sstream>
 
 using namespace std;
 
@@ -19,18 +20,18 @@ int GetRecSize (Record* r);
 
 class recordCompare{
 private:
-	OrderMaker *sortedOrder;
+	OrderMaker *sortOrder;
 public:
     recordCompare(OrderMaker *sortorder)
     {
-        sortedOrder = sortorder;
+        sortOrder = sortorder;
     }
     
     bool operator() (const Record * left,const Record * right) const
     {
         //returns a negative number, a 0, or a positive number if left is less than, equal to, or greater than right.
         ComparisonEngine ceng;
-        int returnT = ceng.Compare((Record *)left,(Record *) right, sortedOrder);
+        int returnT = ceng.Compare((Record *)left,(Record *) right, sortOrder);
         
         if(returnT < 0)
         {
@@ -48,15 +49,15 @@ public:
 class recordComparePQ
 {
 private:
-	OrderMaker *sortedOrder;
+	OrderMaker *sortOrder;
 public:
-    recordComparePQ(OrderMaker *sortedorder)
+    recordComparePQ(OrderMaker *sortorder)
     {
-        sortedOrder = sortedorder;
+        sortOrder = sortorder;
     }
     bool operator() (const pair<Record *, int> pair1, const pair<Record *, int> pair2) const {
         ComparisonEngine ceng;
-        int returnT = ceng.Compare(pair1.first,pair2.first,sortedOrder);
+        int returnT = ceng.Compare(pair1.first,pair2.first,sortOrder);
         if(returnT < 0)
             return false;
         else
@@ -78,6 +79,9 @@ private:
     Pipe& outputPipe;
     OrderMaker& sortOrder;
     int runLength;
+	
+	//File f2;
+	pthread_t bigQThread;
     
 };
 

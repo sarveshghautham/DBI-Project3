@@ -3,6 +3,7 @@
 
 #include <fstream>
 #include <string>
+#include <stdlib.h>
 
 #include "DBFile.h"
 #include "Pipe.h"

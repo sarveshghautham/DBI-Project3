@@ -6,39 +6,6 @@
 #include "Record.h"
 #include "Function.h"
 
-typedef struct {
-    Pipe *inPipe;
-    Pipe *outPipe;
-    CNF *selOp;
-    Record *literal;
-}SelectFromPipeParams;
-
-typedef struct {
-    DBFile *inFile;
-    Pipe *outPipe;
-    CNF *selOp;
-    Record *literal;
-}SelectFromFileParams;
-
-typedef struct {
-    Pipe *inPipe;
-    FILE *outFile;
-    Schema *mySchema;
-}WriteOutParams;
-
-typedef struct {
-    Pipe *inPipe;
-    Pipe *outPipe;
-    int *keepMe;
-    int numAttsInput;
-    int numAttsOutput;
-}ProjectParams;
-
-void * SelectFromPipe (void *);
-void * SelectFromFile (void *);
-void * ProjectRoutine (void *);
-void * WriteOutToFile (void *);
-
 class RelationalOp {
 	public:
 	// blocks the caller until the particular relational operator 
@@ -51,15 +18,12 @@ class RelationalOp {
 
 class SelectFile : public RelationalOp { 
 
-    friend void * SelectFromFile (void *);
 	private:
 	// pthread_t thread;
 	// Record *buffer;
 
 	public:
 
-    SelectFromFileParams *sfParams;
-    pthread_t SelectFileThread;
 	void Run (DBFile &inFile, Pipe &outPipe, CNF &selOp, Record &literal);
 	void WaitUntilDone ();
 	void Use_n_Pages (int n);
@@ -67,21 +31,15 @@ class SelectFile : public RelationalOp {
 };
 
 class SelectPipe : public RelationalOp {
-    friend void * SelectFromPipe(void *);
 	public:
-    SelectFromPipeParams *spParams;
-    pthread_t SelectPipeThread;
-	void Run (Pipe &inPipe, Pipe &outPipe, CNF &selOp, Record &literal);
-	void WaitUntilDone ();
+	void Run (Pipe &inPipe, Pipe &outPipe, CNF &selOp, Record &literal) { }
+	void WaitUntilDone () { }
 	void Use_n_Pages (int n) { }
 };
 class Project : public RelationalOp { 
-
-    friend void * ProjectRoutine (void *);
 	public:
-    pthread_t ProjectThread; 
-	void Run (Pipe &inPipe, Pipe &outPipe, int *keepMe, int numAttsInput, int numAttsOutput);
-	void WaitUntilDone ();
+	void Run (Pipe &inPipe, Pipe &outPipe, int *keepMe, int numAttsInput, int numAttsOutput) { }
+	void WaitUntilDone () { }
 	void Use_n_Pages (int n) { }
 };
 class Join : public RelationalOp { 
@@ -109,13 +67,9 @@ class GroupBy : public RelationalOp {
 	void Use_n_Pages (int n) { }
 };
 class WriteOut : public RelationalOp {
-
-    friend void * WriteOutToFile (void *);
 	public:
-    pthread_t WriteOutThread;
-
-	void Run (Pipe &inPipe, FILE *outFile, Schema &mySchema);
-	void WaitUntilDone (); 
+	void Run (Pipe &inPipe, FILE *outFile, Schema &mySchema) { }
+	void WaitUntilDone () { }
 	void Use_n_Pages (int n) { }
 };
 #endif

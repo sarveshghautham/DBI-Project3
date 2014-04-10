@@ -70,7 +70,7 @@ public:
 
     //Prints the record to a file. Same as print. The only difference is,
     //we use fprintf instead of cout.
-	void Print (Schema *mySchema, FILE *outFile);
+	void PrintToFile (Schema *mySchema, FILE *outFile);
 };
 
 #endif

@@ -50,6 +50,7 @@ void Pipe :: Insert (Record *insertMe) {
 	// if there is not, then we need to wait until the consumer
 	// frees up some space in the pipeline
 	} else {
+	//	cout<<__FUNCTION__<<"I am waiting for free space in pipe" <<endl;
 		pthread_cond_wait (&producerVar, &pipeMutex);
 		buffered [lastSlot % totSpace].Consume (insertMe);
 	}

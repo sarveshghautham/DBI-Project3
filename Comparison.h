@@ -18,16 +18,16 @@ class Comparison {
 	friend class CNF;
 	friend class SortedFile;
 
+	CompOperator op;
+
+public:
+
 	Target operand1;
 	int whichAtt1;
 	Target operand2;
 	int whichAtt2;
 
 	Type attType;
-
-	CompOperator op;
-
-public:
 
 	Comparison();
 
@@ -48,12 +48,12 @@ class OrderMaker {
 	friend class CNF;
 	friend class SortedFile;
 
+public:
+
 	int numAtts;
 
 	int whichAtts[MAX_ANDS];
 	Type whichTypes[MAX_ANDS];
-
-public:
 
 	//Friend method to access OrderMaker object using the stream operators
 	friend ostream& operator<<(std::ostream& os, const OrderMaker& myorder);
@@ -80,12 +80,12 @@ class CNF {
 	friend class ComparisonEngine;
 	friend class SortedFile;
 
+public:
+
 	Comparison orList[MAX_ANDS][MAX_ORS];
 	
 	int orLens[MAX_ANDS];
 	int numAnds;
-
-public:
 
 	// this returns an instance of the OrderMaker class that
 	// allows the CNF to be implemented using a sort-based

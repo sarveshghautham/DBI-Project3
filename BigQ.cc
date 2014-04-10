@@ -15,7 +15,6 @@ using namespace std;
    -> Add the popped out records to the output pipe.
  */
 
-OrderMaker *sortOrder;
 
 BigQ :: BigQ (Pipe &in, Pipe &out, OrderMaker &sortOrder, int runLength):
 inputPipe(in),outputPipe(out),sortOrder(sortOrder),runLength(runLength)
@@ -25,7 +24,7 @@ inputPipe(in),outputPipe(out),sortOrder(sortOrder),runLength(runLength)
         cerr <<"Run length is 0."<<endl;
         exit(-1);
     }
-    pthread_t bigQThread;
+    //pthread_t bigQThread;
     pthread_create(&bigQThread, NULL, readRecordsFromPipe, (void *) this);
 }
 
@@ -41,7 +40,7 @@ void * readRecordsFromPipe(void *arg)
     BigQ *obj = (BigQ *)arg;
     Pipe &in = obj->inputPipe;
     Pipe &out = obj->outputPipe;
-    sortOrder = &(obj->sortOrder);
+    OrderMaker *sortOrder = &(obj->sortOrder);
     int runLength = obj->runLength;
     
     int runRecordCount[100] = {0};
@@ -54,7 +53,13 @@ void * readRecordsFromPipe(void *arg)
     Record * temp = NULL;
     Page page;
     File f1;
-    f1.Open(0, "bq.bin");
+    //f1.Open(0, "bq.bin");
+	stringstream ss;
+	ss<<rand();
+	string ff = "bq_" + ss.str() + ".bin";
+	char * fileNameStr = (char *)ff.c_str(); 
+
+	f1.Open(0,fileNameStr);
     
     while(1)
     {   
@@ -127,7 +132,7 @@ void * readRecordsFromPipe(void *arg)
     
     //open f1 and get the right page numbers in memory
     File f2;
-    f2.Open(1,"bq.bin");
+    f2.Open(1, fileNameStr);
     int numPagesInFile = f2.GetLength();
     //total number of runs
     int runCount = pageLimits.size();
@@ -151,6 +156,7 @@ void * readRecordsFromPipe(void *arg)
     }
 	int id =0;
     int retVal = 0;
+    //int outRecCount = 0;
     //Operations on priority queue
     //Removemin
     while(!pqRecords.empty())
@@ -162,6 +168,7 @@ void * readRecordsFromPipe(void *arg)
         //Removemin and insert into pipe
         //cout << "Popped out run " << runNo << endl;
         pqRecords.pop();
+	//outRecCount++;
         out.Insert(record);
         j = runNo;
         
@@ -190,6 +197,7 @@ void * readRecordsFromPipe(void *arg)
             
         }
     }
+    //cout << "OutRec count: " << outRecCount << endl;
     f2.Close();
     out.ShutDown();
     return NULL;

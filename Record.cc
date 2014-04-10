@@ -18,7 +18,6 @@ Record :: ~Record () {
 
 }
 
-
 int Record :: ComposeRecord (Schema *mySchema, const char *src) {
 
 	// this is temporary storage
@@ -117,7 +116,7 @@ int Record :: ComposeRecord (Schema *mySchema, const char *src) {
 		exit(1);
 	}
 
-	memcpy (bits, recSpace, currentPosInRec);	
+	memcpy (bits, recSpace, currentPosInRec);
 
 	delete [] space;
 	delete [] recSpace;
@@ -468,7 +467,7 @@ void Record :: Print (Schema *mySchema) {
 	cout << "\n";
 }
 
-void Record :: Print (Schema *mySchema, FILE *outFile) {
+void Record::PrintToFile (Schema *mySchema, FILE *outFile){
 
 	int n = mySchema->GetNumAtts();
 	Attribute *atts = mySchema->GetAtts();
@@ -477,8 +476,7 @@ void Record :: Print (Schema *mySchema, FILE *outFile) {
 	for (int i = 0; i < n; i++) {
 
 		// print the attribute name
-		//cout << atts[i].name << ": ";
-        fprintf(outFile, "%s: ", atts[i].name);
+		fprintf(outFile,"%s: ",atts[i].name);
 
 		// use the i^th slot at the head of the record to get the
 		// offset to the correct attribute in the record
@@ -486,39 +484,36 @@ void Record :: Print (Schema *mySchema, FILE *outFile) {
 
 		// here we determine the type, which given in the schema;
 		// depending on the type we then print out the contents
-		//cout << "[";
-        fprintf(outFile, "[");
+		fprintf(outFile,"[");
 
 		// first is integer
 		if (atts[i].myType == Int) {
 			int *myInt = (int *) &(bits[pointer]);
-			//cout << *myInt;	
-            fprintf(outFile, "%d", *myInt);
+			fprintf(outFile,"%d",*myInt);
 
 		// then is a double
 		} else if (atts[i].myType == Double) {
 			double *myDouble = (double *) &(bits[pointer]);
-			//cout << *myDouble;	
-            fprintf(outFile, "%lf", *myDouble);
+			fprintf(outFile,"%lf",*myDouble);
 
 		// then is a character string
 		} else if (atts[i].myType == String) {
 			char *myString = (char *) &(bits[pointer]);
-			//cout << myString;	
-            fprintf(outFile, "%s", myString);
+			fprintf(outFile,"%s",myString);
 		} 
 
-		//cout << "]";
-        fprintf(outFile, "]");
+		fprintf(outFile,"]");
+		
 
 		// print out a comma as needed to make things pretty
 		if (i != n - 1) {
-			//cout << ", ";
-            fprintf (outFile, ", ");
+			fprintf(outFile,", ");
 		}
 	}
 
-	//cout << "\n";
-    fprintf(outFile, "\n");
+	fprintf(outFile,"\n");
+
 }
+
+
 
